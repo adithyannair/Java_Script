@@ -1,0 +1,36 @@
+<script>
+
+var fruit = "apple"
+
+//object  variable  data
+//Mother  emotion   happiness
+//		  caring    always she wants u to be happy
+//        money     5000
+//       areuinoffice yes
+
+
+// Variable stack, data in heap
+function  Mother( )	{
+var emotion = "happiness"
+var caring =  "always she wants u to be happy"
+var money = 5000
+var areuinoffice = "yes"
+var hadbreakfast = "dosa"
+//document.write(emotion,caring,money,areuinoffice,hadbreakfast)
+}
+Mother( )
+
+Amma = ["happiness", "always she wants u to be happy", 5000]
+
+// Variable stack, data in heap
+function care( emotion, caring ){
+var salary = "5.5 Lakhs"
+document.writeln( emotion, caring, salary)
+
+}
+care ("joy", "be happy")
+care ("be joyfull", "always wants to be with u")
+
+
+</script>
+
