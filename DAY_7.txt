@@ -1,0 +1,511 @@
+class demandledger
+  {
+     constructor(loginid,demandno)
+     {
+        this.loginid=loginid
+        this.demandno=demandno
+        
+     }
+     transaction()
+     {
+       var date=["1/01/2021","3/01/2021","5/01/2021"]
+       var particular=["NSDL jan","NSE and BSE","BC","NSDL feb"]
+       var voucher=["k044","J123","AJ007","PQ23"]
+       var debit=[45,45,280,73]
+       var credit=[0,0,0,3572]
+       var ballance=["580cr","380cr","270cr","180cr"]
+       var i
+       for(i=0;i<4;i++)
+       {
+          if(date[i]=="3/01/2021" && particular[i]=="NSE and BSE")
+          {
+            if(voucher[i]=="J123" && debit[i]==45 && credit[i]==0 && ballance[i]=="380cr")
+          {
+          
+              this.display()
+             
+          }
+          }
+       
+       }
+       }
+       display()
+       {
+         document.writeln(this.loginid)
+         document.writeln(this.demandno)
+         //document.writeln(this.date)
+         //document.writeln(this.particular)
+       
+       
+    }
+     }
+ var demand=new demandledger("aj007",1234)
+    demand.transaction()
+ //-----------------------------------------------------------------------------------
+ class shiping
+ {
+    
+    
+  constructor(name,address,pincode,landmark,city,state,country,phone)
+ {
+   this.name=name
+   this.address=address
+   this.pincode=pincode
+   this.landmark=landmark
+   this.city=city
+   this.state=state
+   this.country=country
+   this.phone=phone
+ }
+ validate()
+ {
+   if(this.pincode=="686664" && this.city=="Kochi")
+   {
+      document.writeln("Welcome your data are")
+      this.display()
+   }
+   else
+   {
+     document.writeln("Error try again!!!")
+   }
+   }
+   display()
+   {
+     document.writeln(this.name)
+     document.writeln(this.address)
+     document.writeln(this.pincode)
+     document.writeln(this.landmark)
+     document.writeln(this.city)
+     document.writeln(this.state)
+     document.writeln(this.country)
+     document.writeln(this.phone)
+  }
+ }
+ var s=new shiping("Adithyan","XYZ",686664,"Piravom","Kochi","Kerala","India",856677636)
+ s.validate()
+//-----------------------------------------------------------------------
+class carinsurance
+{
+
+  constructor(name,address,mailid,mobno)
+  {
+     this.name=name
+     this.address=address
+     this.mailid=mailid
+     this.mobno=mobno
+     this.policy(92027,110711,"14/01/2021 to 21/01/2021","Software engineer")
+ }
+ policy(policyno,preposalno,period,occupation)
+ {
+     this.policyno=policyno
+     this.preposalno=preposalno
+     this.period=period
+     this.occupation=occupation
+     this.vehicledetails("KL-07-BJ-5044","CIVIC",10834,2000,2010,5,20000,250000)
+ }
+   //("KL-07-BJ-5044","CIVIC",00834,2000,2010,5,20000,250000) 
+  vehicledetails(regno,model,engineno,cc,year,seating,netpremium,idv)
+  {
+     this.regno=regno
+     this.model=model
+     this.engineno=engineno
+     this.cc=cc
+     this.year=year
+     this.seating=seating
+     this.netpremium=netpremium
+     this.idv=idv
+     
+  }
+  validate()
+  {
+    if(this.engineno==10834)
+    {
+      document.writeln("Welcome")
+      this.display()
+    }
+  else
+  {
+    document.writeln("Error")
+  }
+   }
+   display()
+   {
+     document.writeln(this.name)
+     document.writeln(this.address)
+     document.writeln(this.mailid)
+     document.writeln(this.mobno)
+     document.writeln(this.policyno)
+     document.writeln(this.preposalno)
+     document.writeln(this.period)
+     document.writeln(this.occupation)
+     document.writeln(this.regno)
+     document.writeln(this.model)
+     document.writeln(this.engineno)
+     document.writeln(this.cc)
+     document.writeln(this.year)
+     document.writeln(this.seating)
+     document.writeln(this.netpremium)
+     document.writeln(this.idv)
+          }
+}
+var insurance=new carinsurance("Adithya","XYZ","aj@123",848978433)
+      insurance.validate()
+//-----------------------------------------------------------------------
+let lisence=
+{
+   state:"Kerala",
+   dlno :"KL-41230120012921",
+    name:"Adithya",
+  address:"XYZ",
+   dob:"21/02/1997",
+    details(type,date,valid)
+    {
+       this.type=type
+       this.date=date
+       this.valid=valid
+       
+    },
+    validity()
+    {
+       if(this.name=="Adithya" && this.dlno=="KL-41230120012921")
+       {
+          document.writeln("Welcome")
+          this.display()
+       }
+    else
+    {
+      document.writeln("Error!!")
+    }
+    },
+    display()
+    {
+      document.writeln(this.state)
+      document.writeln(this.dlno)
+      document.writeln(this.name)
+      document.writeln(this.address)
+      document.writeln(this.dob)
+      document.writeln(this.type)
+      document.writeln(this.date)
+      document.writeln(this.valid)
+    
+    }
+    }
+     lisence.details("HV","12/01/2021","12/01/2031")
+     lisence.validity()
+//--------------------------------------------------------------------
+let lab={
+
+  details()
+  {
+ var no=[1,2,3,4]
+ var component=["UJT","Ressistor","Capacitor","CRO"]
+ var spec=["2N2426","220ohms",".01mF","20Mhz"]
+  var i
+    for(i=0;i<4;i++)
+    {
+      if(component[i]=="CRO")
+      {
+         this.display()
+         break
+      }
+    }
+ },
+ validation()
+ {
+    var i
+    for(i=0;i<4;i++)
+    {
+      if(this.component[i]=="CRO")
+      {
+         this.display()
+         break
+      }
+    }
+ },
+ display()
+ {
+    document.writeln("data")
+ }
+}
+lab.details()
+//lab.validation()
+//-----------------------------------------------------
+class theatre
+{
+  constructor(name,screen,seatingcapacity,location)
+{
+   this.name=name
+   this.screen=screen
+   this.seatingcapacity=seatingcapacity
+   this.location=location
+}
+moviedetails(moviename,certificate,duration,time)
+{
+   this.moviename=moviename
+   this.certificate=certificate
+   this.duration=duration
+   this.time=time
+}
+validate()
+{
+  if(this.moviename=="KGF" && this.screen==2)
+  {
+     document.writeln("Welcome ticket details are:")
+     this.display()
+  }
+  else
+  {
+    document.write("Oops something went wrong!!")
+  }
+}
+   display()
+   {
+      document.writeln(this.name)
+      document.writeln(this.screen)
+      document.writeln(this.seatingcapacity)
+      document.writeln(this.location)
+      document.writeln(this.moviename)
+      document.writeln(this.certificate)
+      document.writeln(this.duration)
+      document.writeln(this.time)
+   }
+}
+let details=new theatre("PVR Cinemas",2,350,"Kochi")
+details.moviedetails("KGF","A/U","2:45Hrs","10:00PM")
+details.validate()
+document.writeln("Enjoy your movie experiance with PVR Cinemas")
+//---------------------------------------------------------------------------
+let zomato=
+{
+   name:"Adithyan",
+   address:"Madiwala Bangaloore",
+   mobno:8593872794,
+   food:"biriyani",
+   restraunt:"Biriyanihut",
+   preparetime:"30 mins",
+   arrivaltime:"20mins",
+   couponcode:"HAPPY",
+   actual:250,
+   discount:150,
+   order(food,restraunt,preparetime,arrivaltime)
+   {
+      this.food=food;
+      this.restraunt=restraunt
+      this.preparetime=preparetime
+      this.arrivaltime=arrivaltime
+     
+   },
+   offer()
+   {
+     this.couponcode="HAPPY"
+     if(this.couponcode=="HAPPY")
+     {
+         this.discountfair(250,150)
+     }
+     else
+     {
+       this.fair(250,250)
+     }
+   },
+     discountfair(actual,discount)
+     {
+       this.actual=actual
+       this.discount=discount
+       this.display()
+     },
+     fair(actual,discount)
+     {
+        this.actual=actual
+        this.discount=discount
+        this.display()
+     },
+     display()
+     {
+        document.writeln("Name :"+ this.name)
+        document.writeln("Address :"+ this.address)
+        document.writeln("Mobno :"+ this.mobno)
+        document.writeln("Food name is:"+ this.food)
+        document.writeln("Restraunt name is:"+ this.restraunt)
+        document.writeln("Preparation time is :"+ this.preparetime)
+        document.writeln("Arrival time is :"+ this.arrivaltime) 
+        document.writeln("Actual cost is:"+ this.actual)
+        document.writeln("Discounted cost is:"+ this.discount)
+     }
+}
+zomato.order("Chicken Biriyani","Biriyani HUT","20min","30min")
+   zomato.offer()
+
+//------------------------------------------------------------------------------
+ let uber=
+ {
+      name:"Adithyan",
+       mobno:98485884,
+      email:"aj@123",
+      passwd:1234,
+      age:23,
+      fromlocation:"Silk board",
+      tolocation:"MG Road",
+      arrivaltime:"10mins",
+      
+   details(name,mobno,email,passwd,age,fromlocation,tolocation)
+   {
+     this.name=name
+     this.mobno=mobno
+     this.email=email
+     this.passwd=passwd
+     this.age=age
+     this.fromlocation=fromlocation
+     this.tolocation=tolocation
+     if(this.age>10)
+     {
+     this.price(150,100,250)
+     }
+     else
+     {
+       document.writeln("Enter valid Age(>10yrs)")
+     }
+  },
+  price(cost,tax,total)
+  {
+     this.cost=cost
+     this.tax=tax
+     this.total=total
+     this.validate()
+  },
+  validate()
+  {
+     if(this.email=="aj@123"&& this.passwd=="1234")
+     {
+        document.writeln("<br/>succesfully logged in your details are")
+        this.display()
+     }
+    else
+    {
+    document.writeln("<br/>Wrong username or password")
+    }
+  },
+    display()
+    {
+        
+        document.writeln(this.name)
+        document.writeln(this.mobno)
+        document.writeln(this.email)
+        document.writeln(this.age)
+        document.writeln(this.fromlocation)
+        document.writeln(this.tolocation)
+        document.writeln(this.cost)
+        document.writeln(this.total)
+    
+    }
+ }
+uber.details("Adithyan",9888767,"aj@123",1234,23,"Silk Board","MG Road")
+//---------------------------------------------------------------------------------
+class speedpost
+{
+   constructor(location,trackingno,counterno,opcode,weight,date,time)
+{
+    this.location=location
+    this.trackingno=trackingno
+    this.counterno=counterno
+    this.opcode=opcode
+    this.weight=weight
+    this.date=date
+    this.time=time
+}
+addressdetails(from,to)
+{
+   this.from=from
+   this.to=to
+}
+cost(amnt,tax,total)
+{
+  this.amnt=amnt
+  this.tax=tax
+  this.total=total
+  this.display()
+}
+validate()
+{
+   if(this.weight>30)
+   {
+      this.cost(20,30,100)
+   }
+   else
+   {
+     this.cost(20,30,50)
+   }
+}
+   
+    display()
+    {
+       document.writeln(this.location)
+       document.writeln(this.trackingno)
+       document.writeln(this.counterno)
+       document.writeln(this.opcode)
+       document.writeln(this.weight)
+       document.writeln(this.date)
+       document.writeln(this.time)
+       document.writeln(this.from)
+       document.writeln(this.to)
+       document.writeln(this.amnt)
+       document.writeln(this.tax)
+       document.writeln(this.total)
+     }
+}
+let post=new speedpost("Piravom","BC54768",75322,"A-12",20,"1/1/2021","5:00PM")
+post.addressdetails("EKM","BLR")
+//post.cost(20,30)
+post.validate()
+//-----------------------------------------------------------------------------------------
+let medicalbill=
+{
+     nameofmedical:"Apollo Pramcy",
+     billno:35,
+     date: "16/01/2021",
+     name:"Adithyan",
+    refby:"Dr.Nithin",
+    details()
+    {
+   var qty=["2X1","5X1","10X1"]
+   var description=["Drop ciplox","Blood Galent","Tabletmetatime"]
+   var  amnt=["19.8","150.00","9.90"]
+    var i
+     for(i=0;i<3;i++)
+     {
+        if(qty[i]=="2X1" && description[i]=="Drop ciplox")
+        {
+           document.writeln("Bill details are:")
+           this.display()
+           break;
+        }
+        
+     }
+   },
+   validate()
+   {
+     var i
+     for(i=0;i<3;i++)
+     {
+        if(this.qty[i]=="2X1")
+        {
+           document.writeln("Bill details are:")
+           this.display()
+           break;
+        }
+        
+     }
+     },
+    display()
+    {
+      document.writeln(this.nameofmedical)
+      document.writeln(this.billno)
+      document.writeln(this.date)
+      document.writeln(this.name)
+      document.writeln(this.refby)
+   }
+
+}
+medicalbill.details()
+//----------------------------------------------------------
+*/
+</script>
