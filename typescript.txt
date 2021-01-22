@@ -123,18 +123,18 @@ class corporate
     skill:string="Devaloper/codding";
     reporting:string="venkitesh";
     panno:string="BV007";
-    employee(a:string,b:string,c:string,d:string,e:number,f:string,g:number,h:string,i:string,j:string)
+    constructor(name:string,education:string,dob:string,address:string,mobno:number,email:string,experiance:number,skill:string,reporting:string,panno:string)
     {
-      this.name=a;
-      this.education=b;
-      this.dob=c
-      this.address=d
-      this.mobno=e
-      this.email=f
-      this.experiance=g
-      this.skill=h
-      this.reporting=i
-      this.panno=j
+      this.name=name;
+      this.education=education;
+      this.dob=dob
+      this.address=address
+      this.mobno=mobno
+      this.email=email
+      this.experiance=experiance
+      this.skill=skill
+      this.reporting=reporting
+      this.panno=panno
       this.display()
     }
     display()
@@ -187,7 +187,7 @@ let zomato1=
    },
    offer()
    {
-     this.couponcode="HAPP"
+     this.couponcode="HAPPY"
      if(this.couponcode=="HAPPY")
      {
          this.discountfair(250,150)
@@ -297,15 +297,15 @@ class library
    this.idno=idno
    this.returnon=returnon
    }
-   namedetails(a:string)
+   namedetails(name:string)
    {
-    this.name=a
-    return a
+    this.name=name
+    return name
    }
-   finedetails(b:number)
+   finedetails(fine:number)
    {
-   this.fine=b
-   return b
+   this.fine=fine
+   return fine
    }
    display()
    {
@@ -403,7 +403,6 @@ let irctc=
        mailid:"aj@123",
        from:"ERS",
        to:"BLR",
-       //this.info(100038,41150,"1/1/2021","AC 3Tier","General")
        info(id:number,pnrno:number,trainname:string,date:string,time:string,clas:string,quota:string)
        {
           this.id=id
