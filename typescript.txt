@@ -1,0 +1,590 @@
+function sum(num1:number,num2:number)
+{
+   var sum:number;
+sum=num1+num2;
+return sum;
+}
+var k:number=sum(2,3);
+console.log("sum is "+ k);
+//---------------------------------------------
+function diff(num1:number,num2:number)
+{
+  var d:number=num1-num2;
+  return d;
+}
+var d:number=diff(5,3);
+console.log("differance is"+ d);
+//--------------------------------------------------
+function multi(num1:number,num2:number)
+{
+    var p:number=num1*num2;
+    return p;
+}
+var p:number=multi(3,2);
+console.log("product is "+ p);
+//------------------------------------------------------
+function div(num1:number,num2:number)
+{
+    var d:number=num1/num2;
+    return d;
+}
+var d:number=div(9,3);
+console.log("quotient is "+ d);
+//------------------------------------------------------
+function rem(num1:number,num2:number)
+{
+    var r:number=num1%num2;
+    return d;
+}
+var d:number=rem(9,3);
+console.log("reminder is "+ d);
+//-----------------------------------------------------------
+class car
+{
+
+     name:string="polo";
+     model:string="Gt";
+     year:number=2021;
+     fuel:string="petrol";
+     constructor(name:string,model:string,year:number,fuel:string)
+    {
+ 
+   this.name=name;
+   this.model=model;
+   this.year=year;
+   this.fuel=fuel;
+    }
+     display()
+    {
+        console.log("name is :" +this.name);
+        console.log("model is :" +this.model);
+        console.log("year is :" +this.year);
+        console.log("fuel is :"+this.fuel);
+    }
+}
+var k=new car("polo","Gt",2021,"petrol");
+k.display();
+//---------------------------------------------------------
+  class carinsurance
+{   
+      name="Adithyan"
+      address="XYZ"
+      mailid="aj@123"
+      mobno=8478585859
+      policyno=92027
+      preposalno=110771
+      period="14/01/2021 to 21/01/2021"
+      occupation="software engineer"
+      regno= "KL-07-BJ-5044"
+      model="CIVIC"
+      engineno=834
+      cc=2000
+      year=2010
+      seating=5
+      netpremium=20000
+      idv=250000
+      constructor(name:string,address:string,mailid:string,mobno:number)
+  {
+     this.name=name
+     this.address=address
+     this.mailid=mailid
+     this.mobno=mobno
+     this.policy(92027,110711,"14/01/2021 to 21/01/2021","Software engineer")
+ }
+ policy(policyno:number,preposalno:number,period:string,occupation:string)
+ {
+     this.policyno=policyno
+     this.preposalno=preposalno
+     this.period=period
+     this.occupation=occupation
+     this.vehicledetails("KL-07-BJ-5044","CIVIC",10834,2000,2010,5,20000,250000)
+ }
+   //("KL-07-BJ-5044","CIVIC",00834,2000,2010,5,20000,250000) 
+  vehicledetails(regno:string,model:string,engineno:number,cc:number,year:number,seating:number,netpremium:number,idv:number)
+  {
+     this.regno=regno
+     this.model=model
+     this.engineno=engineno
+     this.cc=cc
+     this.year=year
+     this.seating=seating
+     this.netpremium=netpremium
+     this.idv=idv
+     this.validate()
+  }
+  validate()
+  {
+    if(this.engineno==10834)
+    {
+      console.log("Welcome")
+      this.display()
+    }
+  else
+  {
+    document.writeln("Error")
+  }
+   }
+   display()
+   {
+     console.log(this.name)
+     console.log(this.address)
+     console.log(this.mailid)
+     console.log(this.mobno)
+     console.log(this.mailid)
+     console.log(this.mobno)
+     console.log(this.policyno)
+     console.log(this.preposalno)
+     console.log(this.period)
+     console.log(this.occupation)
+     console.log(this.regno)
+     console.log(this.model)
+     console.log(this.engineno)
+     console.log(this.cc)
+     console.log(this.year)
+     console.log(this.seating)
+     console.log(this.netpremium)
+     console.log(this.idv)
+}
+}
+var insurance=new carinsurance("Adithya","XYZ","aj@123",848978433)
+
+//--------------------------------------------------------
+class theatre
+{
+    name:string;
+    screen:number;
+    location:string;
+    constructor(name:string,screen:number,location:string)
+    {
+           this.name=name;
+           this.screen=screen;
+           this.location=location;
+    }
+    display()
+    {
+        console.log("Theatre name is:"+ this.name);
+        console.log("Number of scrren is:"+ this.screen);
+        console.log("Location is",+ this.location);
+    }
+}
+var t=new theatre("PVR",10,"Kochi")
+t.display();
+//------------------------------------------------------------------------
+class corporate
+{
+    company_name="Intimetec";
+    designation="Software Engineer";
+    sallary="5.5L";
+    location="Bangaloore";
+    name:string="Adithyan";
+    education:string="Btech";
+    dob:string="21/02/1997";
+    address:string="XYZ";
+    mobno:number=857499;
+    email:string="aj003@gmail.com";
+    experiance:number=1;
+    skill:string="Devaloper/codding";
+    reporting:string="venkitesh";
+    panno:string="BV007";
+    employee(name:string,education:string,dob:string,address:string,mobno:number,email:string,experiance:number,skill:string,reporting:string,panno:string)
+    {
+      this.name=name
+      this.education=education
+      this.dob=dob
+      this.address=address
+      this.mobno=mobno
+      this.email=email
+      this.experiance=experiance
+      this.skill=skill
+      this.reporting=reporting
+      this.panno=panno
+      this.display()
+    }
+    display()
+    {
+        console.log("Company name is :"+ this.company_name)
+        console.log("Designation is:"+ this.designation)
+        console.log("Sallary is:"+ this.sallary)
+        console.log("Location is"+ this.location)
+        console.log("Name is :"+ this.name)
+        console.log("Qualification is:"+ this.education)
+        console.log("DOB is"+ this.dob)  
+        console.log("Address is :"+ this.address)  
+        console.log("Mob no is"+ this.mobno)  
+        console.log("emailid is"+ this.email) 
+        console.log("Experiance is:"+ this.experiance)
+        console.log("Skill is:"+ this.skill)
+        console.log("Reporting manager is:"+this.reporting)
+        console.log("Panno is :",this.panno)
+    }
+}
+var c=new corporate()
+c.employee("Adithyan","Btech","21/02/1997","XYZ",857499,"aj@gmail.com",1,"developer","abc","X007")
+//--------------------------------------------------------------------
+var a=[1,2,3,4,5];
+let k:number;
+for( k=0;k<5;k++)
+{
+  console.log("numbers are "+ a[k]);
+}
+//------------------------------------------------------------------------
+let zomato1=
+{
+   name:"Adithyan",
+   address:"Madiwala Bangaloore",
+   mobno:8593872794,
+   food:"biriyani",
+   restraunt:"Biriyanihut",
+   preparetime:"30 mins",
+   arrivaltime:"20mins",
+   couponcode:"HAPPY",
+   actual:250,
+   discount:150,
+   order(food:string,restraunt:string,preparetime:string,arrivaltime:string)
+   {
+      this.food=food;
+      this.restraunt=restraunt
+      this.preparetime=preparetime
+      this.arrivaltime=arrivaltime
+      this.offer()
+   },
+   offer()
+   {
+     this.couponcode="HAPP"
+     if(this.couponcode=="HAPPY")
+     {
+         this.discountfair(250,150)
+     }
+     else
+     {
+       this.fair(250,250)
+     }
+   },
+     discountfair(actual:number,discount:number)
+     {
+       this.actual=actual
+       this.discount=discount
+       this.display()
+     },
+     fair(actual:number,discount:number)
+     {
+        this.actual=actual
+        this.discount=discount
+        this.display()
+     },
+     display()
+     {
+        console.log("Name :"+ this.name)
+        console.log("Address :"+ this.address)
+        console.log("Mobno :"+ this.mobno)
+        console.log("Food name is:"+ this.food)
+        console.log("Restraunt name is:"+ this.restraunt)
+        console.log("Preparation time is :"+ this.preparetime)
+        console.log("Arrival time is :"+ this.arrivaltime) 
+        console.log("Actual cost is:"+ this.actual)
+        console.log("Discounted cost is:"+ this.discount)
+     }
+}
+zomato1.order("Chicken Biriyani","Biriyani HUT","20min","30min")
+//----------------------------------------------------------------------
+class googleaccnt
+{
+    firstname="Adhi"
+    lastname="Nair"
+    username="aj"
+    passwd=1234
+    repasswd=123
+    bday="21/02/1997"
+    gender="Male"
+    mobno=8546
+   constructor(firstname:string,lastname:string)
+   {
+      this.firstname=firstname;
+      this.lastname=lastname;
+   }
+   accntdetails(username:string,passwd:number,repasswd:number,bday:string,gender:string,mobno:number)
+   {
+       this.username=username
+       this.passwd=passwd
+       this.repasswd=repasswd
+       this.bday=bday
+       this.gender=gender
+       this.mobno=mobno
+       if(passwd==repasswd)
+      // if(this.passwd==this.repasswd)
+       {
+       // return "success"
+       g.display()
+      return "successfully created accaunt "
+       }
+       else
+       return "incorrect password try  again!!"
+   }
+      display()
+      {
+         console.log("First name is:"+ this.firstname)
+         console.log("Last name is:"+ this.lastname)
+         console.log("Username is :"+ this.username)
+         console.log("bday is :"+ this.bday)
+         console.log("gender is :"+ this.gender)
+         console.log("mobno is :"+ this.mobno)
+      
+      }
+}
+var g=new googleaccnt("Adithyan","Nair")
+var k=g.accntdetails("adithyan.nair",1234,1234,"21/02/1997","male",854678);
+console.log(k)
+
+//-------------------------------------------------------------------------
+class library
+{
+    bookid=1500
+    bookname= "Motorcycle Diaries"
+    author="Cheguvera"
+    issuedate="14/jan/2021"
+    duedate="14/feb/2021"
+    idno="VJC15EE003"
+    returnon="21/feb/2021"
+    name="Adithyan"
+    fine=100
+  constructor(bookid:number,bookname:string,author:string)
+  {
+   this.bookid=bookid;
+   this.bookname=bookname;
+   this.author=author
+   }
+   date(issuedate:string,duedate:string,idno:string,returnon:string)
+   {
+   this.issuedate=issuedate
+   this.duedate=duedate
+   this.idno=idno
+   this.returnon=returnon
+   }
+   namedetails(name:string)
+   {
+    this.name=name
+    return name
+   }
+   finedetails(fine:number)
+   {
+   this.fine=fine
+   return fine
+   }
+   display()
+   {
+      console.log(this.bookid)
+      console.log(this.bookname)
+      console.log(this.author)
+      console.log(this.issuedate)
+      console.log(this.duedate)
+      console.log(this.idno)
+      console.log(this.returnon)
+      //console.log(this.name)
+      //console.log(this.fine)
+   }
+ }
+ var l=new library(1500,"Motorcycle Diaries","Cheguvera")
+ l.date("14/jan/2021","14/feb/2021","VJC15EE003","21/feb/2021")
+ l.display()
+ var k=l.namedetails("Adithyan")
+ var b:number=l.finedetails(100)
+ console.log(k)
+ console.log(b)
+//-------------------------------------------------------------
+lass temple
+{
+
+    tickettype="Special Entry"
+    day="Monday"
+    date="Dec 1"
+    time="5:00 AM"
+    bookingno=1234
+    name="Adithyan"
+    orderno=8593
+    email="aj.123"
+    aadhar=4567
+    noperson=1
+    seva="Archana"
+    previlage="Laddu"
+    accomodation="Tirumala"
+    rate=500
+   constructor(tickettype:string,day:string,date:string,time:string)
+{
+     this.tickettype=tickettype
+     this.day=day
+     this.date=date
+     this.time=time
+}
+   ticket(bookingno:number,name:string,orderno:number,email:string,aadhar:number,noperson:number,seva:string,previlage:string,accomodation:string,rate:number)
+   {
+      this.bookingno=bookingno
+      this.name=name
+      this.orderno=orderno
+      this.email=email
+      this.aadhar=aadhar
+      this.noperson=noperson
+      this.seva=seva
+      this.previlage=previlage
+      this.accomodation=accomodation
+      this.rate=rate
+   }
+   display()
+   {
+       console.log(this.tickettype)
+       console.log(this.day)
+       console.log(this.date)
+       console.log(this.time)
+       console.log(this.bookingno)
+       console.log(this.name)
+       console.log(this.orderno)
+       console.log(this.email)
+       console.log(this.aadhar)
+       console.log(this.noperson)
+       console.log(this.seva)
+       console.log(this.previlage)
+       console.log(this.accomodation)
+       console.log(this.rate)
+       
+   }
+}
+var dharshan=new temple("Special Entry","Dec 1","Monday","5:00AM")
+dharshan.ticket(1234,"Adithyan",8593,"aj.123",4567,1,"Archana","Laddu","Tirumala",500)
+dharshan.display()
+//----------------------------------------------------------------
+let irctc=
+    {
+       trainno:"RJ4560",
+       trainname:"Rajadhani",
+       id:100038,
+       pnrno:41150,
+       date:"1/1/2021",
+       time:"8:30 PM",
+       clas:"AC 3 Tier",
+       quota:"General",
+       name:"Adithyan",
+       gender:"Male",
+       mailid:"aj@123",
+       from:"ERS",
+       to:"BLR",
+       //this.info(100038,41150,"1/1/2021","AC 3Tier","General")
+       info(id:number,pnrno:number,trainname:string,date:string,time:string,clas:string,quota:string)
+       {
+          this.id=id
+          this.pnrno=pnrno
+          this.clas=clas
+          this.quota=quota
+          if(this.id==100038)
+          {
+            console.log("Your ticket details are")
+            this.details("Adithyan","Male","aj@123","ERS","BLR")
+          }
+          else
+          {
+            document.writeln("Error in PNR no try again!!")
+          }
+       },
+      details(name:string,gender:string,mailid:string,from:string,to:string)
+      {
+         this.name=name
+         this.gender=gender
+         this.mailid=mailid
+         this.from=from
+         this.to=to
+         if(mailid=="aj@123")
+         {
+          //document.writeln("Wish you a happy and safe journey")
+          this.display()
+        }
+        else
+        {
+          document.writeln("Error try again!!")
+        }
+        },
+      display()
+      {
+       console.log(this.trainno)
+       console.log(this.trainname)
+       console.log(this.id)
+       console.log(this.pnrno)
+       console.log(this.date)
+       console.log(this.time)
+       console.log(this.clas)
+       console.log(this.quota)
+       console.log(this.name)
+       console.log(this.gender)
+       console.log(this.mailid)
+       console.log(this.from)
+       console.log(this.to)
+       console.log("Wish you a happy and safe journey")
+      
+      }
+    }
+   irctc.info(100038,41150,"Rajadhani","1/1/2021","8:45 PM","AC 3Tier","General")
+//-----------------------------------------------------------------------------------
+let redbus=
+ {
+      name:"Adithyan",
+       age:23,
+      email:"aj@123",
+      password:"aj@1234",
+     state:"Kerala",
+      dipo:"EKM",
+      no:"KL1423",
+      date:"12/01/2021",
+      time:"8:45PM",
+      from:"EKM",
+      to:"BLR",
+      cost:900,
+      tax:100,
+      total:1000,
+   ticket(no:string,date:string,time:string,from:string,to:string)
+   {
+     this.no=no
+     this.date=date
+     this.time=time
+     this.from=from
+     this.to=to
+     if(this.age>10)
+     {
+     this.price(900,100,1000)
+     }
+     else
+     {
+       console.log("Enter valid Age(>10yrs)")
+     }
+  },
+  price(cost:number,tax:number,total:number)
+  {
+     this.cost=cost
+     this.tax=tax
+     this.total=total
+     this.validate()
+  },
+  validate()
+  {
+     if(this.email=="aj@123"&& this.password=="aj@1234")
+     {
+        console.log("succesfully logged in your details are")
+        this.display()
+     }
+    else
+    {
+    console.log("Wrong username or password")
+    }
+  },
+    display()
+    {
+        console.log(this.name)
+        console.log(this.age)
+        console.log(this.email)
+        console.log(this.state)
+        console.log(this.dipo)
+        console.log(this.no)
+        console.log(this.date)
+        console.log(this.time)
+        console.log(this.from)
+        console.log(this.to)
+    
+    }
+ }
+ redbus.ticket("KL1423","12/01/2021","8:45PM","EKM","BLR")
