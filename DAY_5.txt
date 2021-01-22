@@ -1,0 +1,274 @@
+
+  
+  class battery
+  {
+    constructor(type,standby,talktime,musicplay)
+    {
+       this.type=type
+       this.standby=standby
+       this.talktime=talktime
+       this.musicplay=musicplay
+    }
+    details(tech,body,weight,sim)
+    {
+      this.tech=tech
+      this.body=body
+      this.weight=weight
+      this.sim=sim
+      
+    }
+       validate()
+       {
+         if(this.talktime>10)
+         {
+           this.display()
+         }
+         else
+         {
+           document.writeln("Power off")
+         }
+       }
+     display()
+     {
+         document.writeln(this.type)
+         document.writeln(this.standby)
+         document.writeln(this.talktime)
+         document.writeln(this.musicplay)
+         document.writeln(this.tech)
+         document.writeln(this.body)
+         document.writeln(this.weight)
+         document.writeln(this.sim)   
+     
+     }
+  
+  }
+  var b=new battery("Li-po","24hrs",14,15)
+  b.details("GPS","metal","143g","Nano")
+  b.validate()
+ //--------------------------------------------------------------------- 
+class platform
+{
+
+ constructor(os,chipset,cpu,gpu)
+{
+   this.os=os
+   this.chipset=chipset
+   this.cpu=cpu
+   this.gpu=gpu
+   
+}
+validate()
+{
+if(this.chipset=="Apple A9")
+{
+   document.writeln("platform details are ")
+   this.display()
+}
+else
+{
+  document.writeln("Error in chipset details")
+}
+}
+  display()
+  {
+     document.writeln(this.os)
+     document.writeln(this.chipset)
+     document.writeln(this.cpu)
+     document.writeln(this.gpu)  
+  }
+}    
+ var p=new platform("iOS","Apple A9","Dualcore","PowerVR") 
+ p.validate()
+
+//----------------------------------------------------------------------
+ let platform=
+ {
+    os:"iOS",
+    chipset:"Apple A9",
+    cpu:"Dualcore",
+    gpu:"PowerVR", 
+    validate()
+{
+if(this.chipset=="Apple A9")
+{
+   document.writeln("platform details are ")
+   this.display()
+}
+else
+{
+  document.writeln("Error in chipset details")
+}
+},
+  display()
+  {
+     document.writeln(this.os)
+     document.writeln(this.chipset)
+     document.writeln(this.cpu)
+     document.writeln(this.gpu)  
+  }
+}    
+platform.validate()
+//--------------------------------------------------------
+class tv
+{
+  static model="LG"
+ constructor(lighting,size,type)
+ {
+    //this.model=model
+    this.lighting=lighting
+    this.size=size
+    this.type=type
+ }
+ spec(hdmi,usb,videoservice,price)
+ {
+    this.hdmi=hdmi
+    this.usb=usb
+    this.videoservice=videoservice
+    this.price=price
+ }
+  static modelname()
+  {
+    document.writeln(tv.model)
+
+  }
+  validate()
+  {
+    if(this.price>50000)
+    {
+       document.writeln("TV result is:")
+       this.display()
+    }
+    else
+    {
+     document.writeln("No result found!!")
+    
+    }
+  }
+  display()
+  {
+         document.writeln(this.lighting)
+         document.writeln(this.size)
+         document.writeln(this.type)
+         document.writeln(this.hdmi)
+         document.writeln(this.usb)
+        document.writeln(this.videoservice)
+        document.writeln(this.price) 
+  }
+}
+var t=new tv("back lighting","55 Inch","LED")
+t.spec("Yes","USB2.0","Youtube",55000)
+tv.modelname()
+t.validate()
+
+//--------------------------------------------------------------------
+let tv=
+{
+   data()
+   {
+  var name=["LG","SAMSUNG","SONY","MI"]
+  var price=[55000,50000,58000,40000]
+  var i
+  for(i=0;i<4;i++)
+  {
+   if(name[i]=="SAMSUNG" && price[i]<60000)
+   {
+      this.details("backlighting","55 Inch","LED")
+      break
+   }
+  }
+  },
+  details(lighting,size,type)
+ {
+    //this.model=model
+    this.lighting=lighting
+    this.size=size
+    this.type=type
+    
+ },
+ spec(hdmi,usb,videoservice,price)
+ {
+    this.hdmi=hdmi
+    this.usb=usb
+    this.videoservice=videoservice
+    this.price=price
+    //this.display()
+ },
+ 
+  validate()
+  {
+    if(this.price>50000)
+    {
+       document.writeln("TV result is:")
+       this.display()
+    }
+    else
+    {
+     document.writeln("No result found!!")
+    
+    }
+  }
+  display()
+  {
+         
+         document.writeln(this.lighting)
+         document.writeln(this.size)
+         document.writeln(this.type)
+         document.writeln(this.hdmi)
+         document.writeln(this.usb)
+        document.writeln(this.videoservice)
+        document.writeln(this.price) 
+  }
+}
+tv.data()
+tv.spec("Yes","USB2.0","Youtube",55000)
+tv.validate()
+//---------------------------------------------------------
+class workshop
+{
+  constructor(billno,date,model,serialno)
+  {
+     this.billno=billno
+     this.date=date
+     this.model=model
+     this.serialno=serialno
+     
+  }
+   particulars()
+   {
+     var partno=["DH11","D67","PA23","D45"]
+     var service=["carberator","general service","Mirror","Labourcharge"]
+     var tax=["14.5",0,0]
+      //qty=[1,1,1]
+     var rate=[789,250,109,250]
+      //amaunt=[789,250,109,250]
+      var i
+      for(i=0;i<4;i++)
+      {
+        if(partno[i]=="D67")
+        {
+          if(service[i]=="general service")
+          {
+            if(tax[i]==0)
+            {
+            
+            if(rate[i]==250)
+            {
+               this.display()
+            }
+          
+          }
+        }
+      }
+      }
+   }
+   display()
+   {
+      document.writeln(this.billno)
+      document.writeln(this.date)
+      document.writeln(this.model)
+      document.writeln(this.serialno)
+      //document.writeln(this.)
+  }
+  }
+  var k=new workshop("15/wb/611","21/03/2020","bajaj09","ka03")
+  k.particulars()
