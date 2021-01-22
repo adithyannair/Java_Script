@@ -1,0 +1,200 @@
+class ministatement
+   {
+     constructor(name,date,time)
+     {
+      this.name=name
+      this.date=date
+      this.time=time
+      
+     }
+     details(atmno,cardno,branchname,txnno)
+     {
+        this.atmno=atmno
+        this.cardno=cardno
+        this.branchname=branchname
+        this.txnno=txnno
+        this.accnt(50000,3421,2000000,"www.sbi.com")
+     }
+     accnt(withdrawal,accntno,balance,website)
+     {
+        this.withdrawal=withdrawal
+        this.accntno=accntno
+        this.balance=balance
+        this.website=website
+        
+     }
+     validate()
+     {
+        if(this.accntno==3421)
+       {
+         document.writeln("<br\>Accaunt details are:")
+         this.display()
+       }
+     else
+       {
+        document.writeln("INVALID ACCNTNO!!")
+      
+       }
+     }
+     display()
+     {
+       document.writeln(this.name)
+       document.writeln(this.date)
+       document.writeln(this.time)
+       document.writeln(this.atmno)
+       document.writeln(this.cardno)
+       document.writeln(this.branchname)
+       document.writeln(this.txnno)
+       document.writeln(this.withdrawal)
+       document.writeln(this.accntno)
+       document.writeln(this.ballance)
+       document.writeln(this.website)
+      
+     }
+   }
+  var m=new ministatement("SBI","21/02/2020","10:53AM") 
+     m.details("SJNL45","XXX0516","Bangaloore Main",2907)
+      m.validate()
+//----------------------------------------------------------------
+  let visitingcard=
+  {
+    name:"Adithyan",
+    mail:"aj@123",
+    no:8589384,
+    details(company,designation,address)
+    {
+      this.company=company
+      this.designation=designation
+      this.address=address
+      
+    },
+    validate()
+    {
+      if(this.company=="Intime Tec")
+      {
+        document.writeln("Details are:")
+          this.display()
+      }
+    else
+    {
+      document.writeln("Error")
+    }
+    },
+    display()
+    {
+      
+      document.writeln(this.name)
+      document.writeln(this.mail)
+      document.writeln(this.no)
+      document.writeln(this.company)
+      document.writeln(this.designaion)
+      document.writeln(this.address)
+    }
+  }
+  visitingcard.details("Intime Tec","Software Engineer","XYZ") 
+    visitingcard.validate()
+
+//---------------------------------------------------------------------
+  class cloth
+  {
+    constructor(brand,code,color,size)
+    {
+      this.brand=brand
+      this.code=code
+      this.color=color
+      this.size=size
+      //.details("Cotton","Casual","Solid","Full sleeve","Hooded","Slim fit","Male")
+    }
+    details(material,ocassion,pattern,sleeve,necktype,fit,gender)
+    {
+      this.material=material
+      this.ocassion=ocassion
+      this.pattern=pattern
+      this.sleeve=sleeve
+      this.necktype=necktype
+      this.fit=fit
+      this.gender=gender
+      
+    }
+    validate()
+    {
+      if(this.gender=="Male")
+      {
+         document.writeln("Cloth details are:")
+         this.display()
+      }
+      else
+      {
+       document.writeln("Details are unavailable:")
+      }
+    }
+    display()
+    {
+     document.writeln(this.brand) 
+     document.writeln(this.code)
+     document.writeln(this.color)
+     document.writeln(this.size)
+     document.writeln(this.material)
+     document.writeln(this.ocassion)
+     document.writeln(this.pattern)
+     document.writeln(this.sleeve)
+     document.writeln(this.necktype) 
+     document.writeln(this.fit)
+     document.writeln(this.gender) 
+    }
+  }
+  var c=new cloth("Peter England","PE007","Black","S")
+  c.details("Cotton","Casual","Solid","Full sleeve","Hooded","Slim fit","Male")
+   c.validate()
+
+//------------------------------------------------------------------------
+let shirt=
+  {
+    
+      brand:"Peter England",
+      code:"PE007",
+      color:"Blue",
+      size:"M",
+      //.details("Cotton","Casual","Solid","Full sleeve","Hooded","Slim fit","Male")
+    
+    details(material,ocassion,pattern,sleeve,necktype,fit,gender)
+    {
+      this.material=material
+      this.ocassion=ocassion
+      this.pattern=pattern
+      this.sleeve=sleeve
+      this.necktype=necktype
+      this.fit=fit
+      this.gender=gender
+    },
+    validate()
+    {
+      if(this.gender=="Male")
+      {
+         document.writeln("Cloth details are:")
+         this.display()
+      }
+      else
+      {
+       document.writeln("Details are unavailable:")
+      }
+    },
+    display()
+    {
+     document.writeln(this.brand) 
+     document.writeln(this.code)
+     document.writeln(this.color)
+     document.writeln(this.size)
+     document.writeln(this.material)
+     document.writeln(this.ocassion)
+     document.writeln(this.pattern)
+     document.writeln(this.sleeve)
+     document.writeln(this.necktype) 
+     document.writeln(this.fit)
+     document.writeln(this.gender) 
+    }
+  }
+  
+  shirt.details("Cotton","Casual","Solid","Full sleeve","Hooded","Slim fit","Male")
+   shirt.validate()
+//....................................
