@@ -1,3 +1,4 @@
+//Typescript practice session
 function sum(num1:number,num2:number)
 {
    var sum:number;
@@ -39,6 +40,7 @@ function rem(num1:number,num2:number)
 var d:number=rem(9,3);
 console.log("reminder is "+ d);
 //-----------------------------------------------------------
+//class using Typescript
 class car
 {
 
@@ -121,7 +123,7 @@ k.display();
     }
   else
   {
-    document.writeln("Error")
+    console.log("Error")
   }
    }
    display()
@@ -172,10 +174,10 @@ t.display();
 //------------------------------------------------------------------------
 class corporate
 {
-    company_name="Intimetec";
-    designation="Software Engineer";
-    sallary="5.5L";
-    location="Bangaloore";
+    company_name:string="Intimetec";
+    designation:string="Software Engineer";
+    sallary:string="5.5L";
+    location:string="Bangaloore";
     name:string="Adithyan";
     education:string="Btech";
     dob:string="21/02/1997";
@@ -198,7 +200,7 @@ class corporate
       this.skill=skill
       this.reporting=reporting
       this.panno=panno
-      this.display()
+     // this.display()
     }
     display()
     {
@@ -220,8 +222,9 @@ class corporate
 }
 var c=new corporate()
 c.employee("Adithyan","Btech","21/02/1997","XYZ",857499,"aj@gmail.com",1,"developer","abc","X007")
+c.display()
 //--------------------------------------------------------------------
-var a=[1,2,3,4,5];
+var a=[1,2,3,4,5];//array and loop practice session
 let k:number;
 for( k=0;k<5;k++)
 {
@@ -250,7 +253,7 @@ let zomato1=
    },
    offer()
    {
-     this.couponcode="HAPP"
+     this.couponcode="HAPPY"
      if(this.couponcode=="HAPPY")
      {
          this.discountfair(250,150)
@@ -590,3 +593,4 @@ let redbus=
  }
  redbus.ticket("KL1423","12/01/2021","8:45PM","EKM","BLR")
  redbus.validate()
+//--------------------------------------------------
