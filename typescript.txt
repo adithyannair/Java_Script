@@ -67,22 +67,22 @@ k.display();
 //---------------------------------------------------------
   class carinsurance
 {   
-      name="Adithyan"
-      address="XYZ"
-      mailid="aj@123"
-      mobno=8478585859
-      policyno=92027
-      preposalno=110771
-      period="14/01/2021 to 21/01/2021"
-      occupation="software engineer"
-      regno= "KL-07-BJ-5044"
-      model="CIVIC"
-      engineno=834
-      cc=2000
-      year=2010
-      seating=5
-      netpremium=20000
-      idv=250000
+      name:string="Adithyan"
+      address:string="XYZ"
+      mailid:string="aj@123"
+      mobno:number=8478585859
+      policyno:number=92027
+      preposalno:number=110771
+      period:string="14/01/2021 to 21/01/2021"
+      occupation:string="software engineer"
+      regno:string= "KL-07-BJ-5044"
+      model:string="CIVIC"
+      engineno:number=834
+      cc:number=2000
+      year:number=2010
+      seating:number=5
+      netpremium:number=20000
+      idv:number=250000
       constructor(name:string,address:string,mailid:string,mobno:number)
   {
      this.name=name
@@ -110,7 +110,7 @@ k.display();
      this.seating=seating
      this.netpremium=netpremium
      this.idv=idv
-     this.validate()
+    // this.validate()
   }
   validate()
   {
@@ -147,13 +147,13 @@ k.display();
 }
 }
 var insurance=new carinsurance("Adithya","XYZ","aj@123",848978433)
-
+   insurance.validate()
 //--------------------------------------------------------
 class theatre
 {
-    name:string;
-    screen:number;
-    location:string;
+    name:string="PVR";
+    screen:number=10;
+    location:string="Kochi";
     constructor(name:string,screen:number,location:string)
     {
            this.name=name;
@@ -246,7 +246,7 @@ let zomato1=
       this.restraunt=restraunt
       this.preparetime=preparetime
       this.arrivaltime=arrivaltime
-      this.offer()
+      //this.offer()
    },
    offer()
    {
@@ -286,17 +286,18 @@ let zomato1=
      }
 }
 zomato1.order("Chicken Biriyani","Biriyani HUT","20min","30min")
+zomato1.display()
 //----------------------------------------------------------------------
 class googleaccnt
 {
-    firstname="Adhi"
-    lastname="Nair"
-    username="aj"
-    passwd=1234
-    repasswd=123
-    bday="21/02/1997"
-    gender="Male"
-    mobno=8546
+    firstname:string="Adhi"
+    lastname:string="Nair"
+    username:string="aj"
+    passwd:number=1234
+    repasswd:number=123
+    bday:string="21/02/1997"
+    gender:string="Male"
+    mobno:number=8546
    constructor(firstname:string,lastname:string)
    {
       this.firstname=firstname;
@@ -338,15 +339,15 @@ console.log(k)
 //-------------------------------------------------------------------------
 class library
 {
-    bookid=1500
-    bookname= "Motorcycle Diaries"
-    author="Cheguvera"
-    issuedate="14/jan/2021"
-    duedate="14/feb/2021"
-    idno="VJC15EE003"
-    returnon="21/feb/2021"
-    name="Adithyan"
-    fine=100
+    bookid:number=1500
+    bookname:string= "Motorcycle Diaries"
+    author:string="Cheguvera"
+    issuedate:string="14/jan/2021"
+    duedate:string="14/feb/2021"
+    idno:string="VJC15EE003"
+    returnon:string="21/feb/2021"
+    name:string="Adithyan"
+    fine:number=100
   constructor(bookid:number,bookname:string,author:string)
   {
    this.bookid=bookid;
@@ -360,12 +361,12 @@ class library
    this.idno=idno
    this.returnon=returnon
    }
-   namedetails(name:string)
+   namedetails(name:string):string
    {
     this.name=name
     return name
    }
-   finedetails(fine:number)
+   finedetails(fine:number):number
    {
    this.fine=fine
    return fine
@@ -391,23 +392,23 @@ class library
  console.log(k)
  console.log(b)
 //-------------------------------------------------------------
-lass temple
+class temple
 {
 
-    tickettype="Special Entry"
-    day="Monday"
-    date="Dec 1"
-    time="5:00 AM"
-    bookingno=1234
-    name="Adithyan"
-    orderno=8593
-    email="aj.123"
-    aadhar=4567
-    noperson=1
-    seva="Archana"
-    previlage="Laddu"
-    accomodation="Tirumala"
-    rate=500
+    tickettype:string="Special Entry"
+    day:string="Monday"
+    date:string="Dec 1"
+    time:string="5:00 AM"
+    bookingno:number=1234
+    name:string="Adithyan"
+    orderno:number=8593
+    email:string="aj.123"
+    aadhar:number=4567
+    noperson:number=1
+    seva:string="Archana"
+    previlage:string="Laddu"
+    accomodation:string="Tirumala"
+    rate:number=500
    constructor(tickettype:string,day:string,date:string,time:string)
 {
      this.tickettype=tickettype
@@ -480,7 +481,7 @@ let irctc=
           }
           else
           {
-            document.writeln("Error in PNR no try again!!")
+            console.log("Error in PNR no try again!!")
           }
        },
       details(name:string,gender:string,mailid:string,from:string,to:string)
@@ -497,7 +498,7 @@ let irctc=
         }
         else
         {
-          document.writeln("Error try again!!")
+          console.log("Error try again!!")
         }
         },
       display()
@@ -558,7 +559,7 @@ let redbus=
      this.cost=cost
      this.tax=tax
      this.total=total
-     this.validate()
+     //this.validate()
   },
   validate()
   {
@@ -588,3 +589,4 @@ let redbus=
     }
  }
  redbus.ticket("KL1423","12/01/2021","8:45PM","EKM","BLR")
+ redbus.validate()
