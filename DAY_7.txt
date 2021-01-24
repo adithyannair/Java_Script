@@ -507,5 +507,39 @@ let medicalbill=
 }
 medicalbill.details()
 //----------------------------------------------------------
-*/
+class theatre
+{
+  constructor(name,location,mobno)
+   {
+      this.name=name
+      this.location=location
+      this.mobno=mobno
+   }
+   display()
+   {
+     document.writeln(this.name)
+     document.writeln(this.location)
+     document.writeln(this.mobno)
+   }
+}
+class film extends theatre
+{
+  constructor(movie,screen,time)
+   {
+       super("PVR","Kochi",86774884)
+       this.movie=movie
+       this.screen=screen
+       this.time=time
+       //super("PVR","Kochi",86774884)
+   }
+   display()
+   {
+     document.writeln(this.movie)
+     document.writeln(this.screen)
+     document.writeln(this.time)
+   
+   }
+}
+var m=new film("KGF",2,"9:30PM")
+m.display()    //overriding
 </script>
