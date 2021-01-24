@@ -65,8 +65,8 @@ cost(amnt:number,tax:number,total:number)
 }
 let post=new speedpost("Piravom","BC54768",75322,"A-12",20,"1/1/2021","5:00PM")
 post.addressdetails("EKM","BLR")
-post.cost(20,80,100)
-//post.validate()
+//post.cost(20,80,100)
+post.validate()
 post.display()
 //-------------------------------------------------------------------
 let uber=
@@ -92,6 +92,9 @@ let uber=
     this.age=age
     this.fromlocation=fromlocation
     this.tolocation=tolocation
+    },
+    agevalidate()
+    {
     if(this.age>10)
     {
     this.price(150,100,250)
@@ -135,6 +138,7 @@ let uber=
    }
 }
 uber.details("Adithyan",9888767,"aj@123",1234,23,"Silk Board","MG Road")
+uber.agevalidate()
 //------------------------------------------------------------------------
 class construction
 {
@@ -178,13 +182,13 @@ display()
    document.writeln(this.bedrooms)
    document.writeln(this.avgrate)
    document.writeln(this.recomended)
-   document.writeln(this.projectavailable[0])
-   document.writeln(this.projectavailable[1])
-   document.writeln(this.projectavailable[2])
-   document.writeln(this.projectavailable[3])
-   document.writeln(this.properyavailable[0])
-   document.writeln(this.properyavailable[1])
-   document.writeln(this.properyavailable[2])
+  // document.writeln(this.projectavailable[0])
+   //document.writeln(this.projectavailable[1])
+   //document.writeln(this.projectavailable[2])
+   //document.writeln(this.projectavailable[3])
+   //document.writeln(this.properyavailable[0])
+   //document.writeln(this.properyavailable[1])
+   //document.writeln(this.properyavailable[2])
 }
 }
 var property=new construction("Residential","Kochi,Kerala","Marrinedrive","9000sqr ft",8,"East","30m","130CR")
