@@ -1,4 +1,5 @@
 <script>
+//practice session introduction to variables and objects
 var fruit = "apple"
 
 //object  variable  data
@@ -9,19 +10,21 @@ var fruit = "apple"
 
 
 // Variable stack, data in heap
+//--------------------------------------
 function  Mother( )	{
 var emotion = "happiness"
 var caring =  "always she wants u to be happy"
 var money = 5000
 var areuinoffice = "yes"
 var hadbreakfast = "dosa"
-//document.write(emotion,caring,money,areuinoffice,hadbreakfast)
+document.write(emotion,caring,money,areuinoffice,hadbreakfast)
 }
 Mother( )
 
-Amma = ["happiness", "always she wants u to be happy", 5000]
+Amma = ["happiness", "always she wants u to be happy", 5000]//Different way of initialising
 
 // Variable stack, data in heap
+//----------------------------------------
 function care( emotion, caring ){
 var salary = "5.5 Lakhs"
 document.writeln( emotion, caring, salary)
@@ -75,27 +78,29 @@ document.writeln(AccountNo, BroadbandUserID,IPAddress,TotalMBdownloaded,Mobiledo
 }
 accountd()
 
-accountd("1135497")
+//accountd("1135497")
 
-accountd("1113460","21.26 GB")
+//accountd("1113460","21.26 GB")
 //-----------------------------------------
-var fruit = "apple"
+//var fruit = "apple"
 function Mother( ) {
 var emotion = "happiness"
-var caring = "ahghag"
+var caring = "Care"
 var money = 5000
 document.writeln(emotion, caring, money)
 }
 Mother()
-
-function Freind ( ) {
+//---------------------------------------
+function freind ( ) {
 var help = "dropped me to the office"
 var sadness = "lost money"
 var joy = "trip"
 var marks = 70
 document.write(help, sadness, joy, marks)
 }
+friend()
 //---------------------------------------------------
+//Introduction to class
 class employee
 {
   name="Ram"
@@ -126,7 +131,7 @@ k.set("ahvhjs")
 k.display()
 employee.addr()
 //---------------------------------------------
-var fruit = "apple"
+//var fruit = "apple"
 function ticket() {
 var tickettype = "Special Entry Darshan"
 var Date = "Dec 1st"
@@ -165,7 +170,7 @@ var location="Banglore"
 document.writeln(Cname,designation,salary,location)
 }
 JVT()
-
+//-------------------------------------------------
 function Cname(Cname,designation,salary){
 var location="Banglore"
 document.writeln(Cname,designation,salary,location)
@@ -180,7 +185,7 @@ var communicationaddress="233/3GroundFloorNewThippasandra"
 document.write(name,Educationalqualification,dateofbirth,communicationaddress)
 }
 name()
-
+//------------------------------
 function name(name,Educationalqualification){
 var ResidenceNumber="08025216666"
 var Mobile="9900367097"
@@ -202,7 +207,7 @@ var location ="bangalore"
 document.writeln(companyname,designation,salary,location)
 }
 corporateinformation()
-
+//-------------------------------------------
 function details() {
 var name = "jai venkateshwara technologies"
 var education = "BTECH MCA MBA BSC MSC"
@@ -218,7 +223,7 @@ document.write(name,education,
 DOB,address,residencenumber,mobile,experience,skillandrelevantexperience,reportingmanager)
 }
 details()
-
+//-----------------------------------------------------------------------
 function account() {
 var accnum = "1135497
 var bbuserid = "11128550"
@@ -227,7 +232,7 @@ var ipaddress = "10.245.97.123"
 document.write(accnum,bbuserid,ipaddress)
 }
 account()
-
+//-----------------------------------------------------
 function data() {
 var totalmb = "21.26"
 var mobilespeed = "30.05mbps"
