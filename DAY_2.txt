@@ -197,3 +197,52 @@ property.project()
 property.display()
 //----------------------------------------------------------
 
+let bookmyshow=
+{
+  regeon:["Kochi","Bengaluru","Pune"],
+  movie:["Kurupu","KGF","Marekkar"],
+  theatre:["PVR","Cinipolis","Carnival"],
+  timming:["11:30AM","1:30PM","4:30PM","7:00PM","9:30PM"],
+  validateregeon()
+  {
+     var i;
+     for(i=0;i<3;i++)
+     {
+        if(this.regeon[i]=="Kochi")
+        {
+          this.validatemovie()
+        }
+     }
+  },
+
+validatemovie()
+{
+   var i
+   for(i=0;i<3;i++)
+   {
+     if(this.movie[i]=="Kurupu")
+     this.validatetheatre() 
+   }
+},
+validatetheatre()
+{  
+   var i
+   for(i=0;i<3;i++)
+   {
+     if(this.theatre[i]=="PVR")
+     {
+        this.display()
+     }
+   
+   }
+},
+display()
+{
+
+document.writeln("<br/>Regeon is: "+ this.regeon[0])
+document.writeln("<br/>Movie is: "+ this.movie[0])
+document.writeln("<br/>Theatre is: ", this.theatre[0])
+}
+}
+bookmyshow.validateregeon()
+//------------------------------------------------------------------------------------------------------
