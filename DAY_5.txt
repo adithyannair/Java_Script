@@ -272,3 +272,34 @@ class workshop
   }
   var k=new workshop("15/wb/611","21/03/2020","bajaj09","ka03")
   k.particulars()
+  //--------------------------------------------------------------
+  
+  class vehicle
+{
+    constructor(a,b)
+    {
+       this.name=a
+       this.type=b
+    }
+    
+}
+ class car extends vehicle
+ {
+     constructor(brand,year)
+     {
+       
+       super("car","LMV")
+       this.brand=brand
+       this.year=year
+     }
+     display()
+     {
+       document.writeln(this.brand) 
+       document.writeln(this.year)
+       document.writeln(this.name)
+       document.writeln(this.type)
+     }
+}
+var k=new car("BMW X5",2021)
+k.display()
+//-----------------------------------------------------------------------
