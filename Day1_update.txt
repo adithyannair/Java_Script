@@ -1,0 +1,316 @@
+<script>
+//practice session introduction to variables and objects
+var fruit = "apple"
+
+//object  variable  data
+//Mother  emotion   happiness
+//		  caring    always she wants u to be happy
+//        money     5000
+//       areuinoffice yes
+
+
+// Variable stack, data in heap
+//--------------------------------------
+function  Mother( )	{
+var emotion = "happiness"
+var caring =  "always she wants u to be happy"
+var money = 5000
+var areuinoffice = "yes"
+var hadbreakfast = "dosa"
+document.write(emotion,caring,money,areuinoffice,hadbreakfast)
+}
+Mother( )
+
+Amma = ["happiness", "always she wants u to be happy", 5000]//Different way of initialising
+
+// Variable stack, data in heap
+//----------------------------------------
+function care( emotion, caring ){
+var salary = "5.5 Lakhs"
+document.writeln( emotion, caring, salary)
+
+}
+care ("joy", "be happy")
+care ("be joyfull", "always wants to be with u")
+//-----------------------------------------------------
+mother() //allocates memory
+//to write above code in single line
+mother = [ "happiness","always happy",5000]
+function care(emotion, caring){
+var salary = "5.5 lakhs"
+document.write(emotion,caring,salary)
+}
+care("happy","always she wants u to be happy")
+
+//--------------------------------------------------------
+function company() {
+var name = "JVT"
+var Designation = "Programmer"
+var Salary = "2.3 or 230000"
+var Location = "Bangalore"
+var EducationalQualification = "B TECH MCA MBA BSC MSC"
+var DOB = "2/6/1988"
+var CommunicationAddress = "233/3 Ground floor new thippasandra"
+var ResidenceNumber = "08025216666"
+var Mobile = 9900367097
+var Email = "venkatesh.db@gmail.com"
+var TotalITExp = "1 years"
+var SkillandExp = "C,CPP all Lang & 1 years"
+var ReportingManager = "Venkatesh"
+var PANCARDNO = "asu675901f"
+
+document.writeln(name, Designation, Salary, Location,EducationalQualification,DOB,CommunicationAddress,ResidenceNumber,Mobile,Email,TotalITExp,SkillandExp,ReportingManager,PANCARDNO)
+}
+company()
+
+//company("JVT","Programmer")
+comapny = ["JVT", "Programmer", "2.3 or 230000", "Bangalore"]//another way of initialising
+//-------------------------------------------
+function accountd() {
+var AccountNo =  1135497
+var BroadbandUserID = 11128550
+var IPAddress = "10.245.97.123"
+var TotalMBdownloaded = "21.26 GB"
+var MobiledownloadSpeed = "30.05 mbps"
+var MobileuploadSpeed  = "32.06 mbps"
+
+document.writeln(AccountNo, BroadbandUserID,IPAddress,TotalMBdownloaded,MobiledownloadSpeed,MobileuploadSpeed) 
+}
+accountd()
+
+//accountd("1135497")
+
+//accountd("1113460","21.26 GB")
+//-----------------------------------------
+//var fruit = "apple"
+function Mother( ) {
+var emotion = "happiness"
+var caring = "Care"
+var money = 5000
+document.writeln(emotion, caring, money)
+}
+Mother()
+//---------------------------------------
+function freind ( ) {
+var help = "dropped me to the office"
+var sadness = "lost money"
+var joy = "trip"
+var marks = 70
+document.write(help, sadness, joy, marks)
+}
+friend()
+//---------------------------------------------------
+//Introduction to class
+class employee
+{
+  name="Ram"
+  static address="Btm"
+  constructor(mailid,mobno)
+  {
+     this.mailid=mailid
+     this.mobno=mobno
+  }
+  static addr()
+  {
+    document.writeln(employee.address)
+  }
+  display()
+  {
+     document.writeln(this.name)
+     document.writeln(this.mailid)
+     document.writeln(this.mobno)
+  }
+  set(a)
+  {
+     this.name=a
+  }
+}
+var k=new employee("aj123",8593)
+//k.display()
+k.set("ahvhjs")
+k.display()
+employee.addr()
+//---------------------------------------------
+//var fruit = "apple"
+function ticket() {
+var tickettype = "Special Entry Darshan"
+var Date = "Dec 1st"
+var Day = "Tuesday"
+var Time = "3:30 Am"
+var perslotticket = "2000"
+var BookingNo = "IS151110080016"
+var Nameofpilgrim = "Venkatesh"
+var orderno = 010600013554
+var Email = "venkateshprofessional17@gmail.com"
+var Amtinfig = 222.00
+var Proofofid = "Aadhar card 733498928758"
+var bookeddateandtime = "11062015 11:36:46"
+var noofpersons = 1
+var Nameofseva = "Archana"
+var Reportingtime = "4:00 AM"
+var performancedateandtime = "12012015 AM 4:30:00"
+var Privilagetoseva = "Two small laddu"
+document.writeln(tickettype, Date, Day, Time, perslotticket, BookingNo, Nameofpilgrim, orderno, Email, Amtinfig, Proofofid, bookeddateandtime, noofpersons, Nameofseva, Reportingtime, performancedateandtime, Privilagetoseva   )
+}
+ticket()
+ticket = ["Special Entry Darshan", "Dec 1st", "Tuesday", "3:30 Am"]
+
+function tic(Bookedtime, Accomodationtype, Available, Nooftickets) {
+var Rate = "50 to 2000"
+document.writeln(Bookedtime, Accomodationtype, Available, Nooftickets, Rate)
+}
+tic("11:36:46", "Rs 500 Tirumala", "350", "1")
+//--------------------------------------------------------------
+
+function JVT(){
+var Cname="JVT"
+var designation="Programmer"
+var salary="230000"
+var location="Banglore"
+document.writeln(Cname,designation,salary,location)
+}
+JVT()
+//-------------------------------------------------
+function Cname(Cname,designation,salary){
+var location="Banglore"
+document.writeln(Cname,designation,salary,location)
+}
+Cname("JVT","Programmer","230000")
+//--------------------------------------------------
+function name(){
+var name="Jai Venkateshwara Technologies"
+var Educationalqualification="BTECH"
+var dateofbirth="02/06/1988"
+var communicationaddress="233/3GroundFloorNewThippasandra"
+document.write(name,Educationalqualification,dateofbirth,communicationaddress)
+}
+name()
+//------------------------------
+function name(name,Educationalqualification){
+var ResidenceNumber="08025216666"
+var Mobile="9900367097"
+var Email="venkatesh.db@gmail.com"
+var TotalITExp="1tear"
+var SkillandRelevant="C,CPP"
+var ReportingManager="Venkatesh"
+var Pancard="asu675901f"
+document.writeln(ResidenceNumber,Mobile,Email,TotalITExp,SkillandRelevant,ReportingManager,Pancard)
+}
+name()
+//---------------------------------------------------------
+function corporateinformation() {
+var companyname ="JVT"
+var designation ="programmer"
+var salary =230000
+var location ="bangalore"
+
+document.writeln(companyname,designation,salary,location)
+}
+corporateinformation()
+//-------------------------------------------
+function details() {
+var name = "jai venkateshwara technologies"
+var education = "BTECH MCA MBA BSC MSC"
+var DOB = "2/06/1988"
+var address = "233/3 ground floor new thippasandra"
+var residencenumber = 80252166666
+var mobile = 9900367097
+var experience = "1 year"
+var skillandrelevantexperience = "c, cpp all lang & 1 years"
+var reportingmanager = "venkatesh"
+var pancardnum = "asu675901f"
+document.write(name,education,
+DOB,address,residencenumber,mobile,experience,skillandrelevantexperience,reportingmanager)
+}
+details()
+//-----------------------------------------------------------------------
+function account() {
+var accnum = "1135497
+var bbuserid = "11128550"
+var ipaddress = "10.245.97.123"
+
+document.write(accnum,bbuserid,ipaddress)
+}
+account()
+//-----------------------------------------------------
+function data() {
+var totalmb = "21.26"
+var mobilespeed = "30.05mbps"
+var uploadspeed = "32.06mbps"
+
+document.write(totalmb,mobilespeed,uploadspeed)
+}
+data()
+//-------------------------------------------
+function chipdetails()
+{
+    var os      ="iOS 9, upgradable to iOS 9.2"
+    var chipset  = "Apple A9"
+    var  cpu      ="Dual-core 1.84 GHz Twister" 
+    var  gpu      = "PowerVR GT7600 (six-core graphics)"
+    var model = "iphone"
+    var manufactuer= "Apple"
+    var Os = "ios 4.0"
+    var processor= "1 GHZ"
+    var rammemory= "512Mb"
+    var keyboard= "Software"
+    var storage= "16GB/32Gb"
+    var flash = "LED"
+    var videocall = "VGA"
+    var videorecording= "720 F"
+    var noiceCancelling= "2 microphones"
+    var expandablestorage= "No"
+
+  document.writeln(os,chipset,cpu,gpu,model,manufactuer,Os,processor,rammemory,keyboard,storage,flash,videocall,videorecording,noiceCancelling,expandablestorage)
+
+}
+chipsetdetails()
+//----------------------------------------------------------------------------------------------------------------------------------
+function platform()
+{
+
+  var os     = "iOS 9, upgradable to iOS 9.2"
+  var chipset = "Apple A9"
+  var cpu     = "Dual-core 1.84 GHz Twister"
+  var gpu      = "PowerVR GT7600 (six-core graphics)"
+
+ document.writeln(os,chipset,cpu,gpu)
+}
+platform()
+
+//------------------------------------------------------------------------------------------------
+ function battery()	 
+{
+  var type="Non-removable Li-Po 1715 mAh battery (6.9 Wh)"
+  var standby= "Up to 240 h (3G)"
+  var talktime ="Up to 14 h (3G)"
+  var musicplay ="Up to 50 h"
+  var technology =" GSM / CDMA / HSPA / EVDO / LTE"
+
+  var dimensions  =" 138.3 x 67.1 x 7.1 mm (5.44 x 2.64 x 0.28 in)"
+  var weight="143 g (5.04 oz)"
+   var sim= "Nano-SIM"
+   document.writeln(type,standby,talktime,musicplay,technology)
+}
+battery()
+//------------------------------------------------------------------------------------------------------
+ function laptopspec()
+{
+  var model= "LGp430"
+  var os=" Windows 7 home base, Premium or professional"
+  var processor=" Second Generation Intel Core i3,i5 or i7  processor"
+  var ram= "upto 8GB"
+  var screen=" 14.0 inch HD-LCD -backlit"
+  var resolution=" 1366*768"
+  var weight=" 4.28 pound"
+  var storage ="320GB"
+  var graphics= "Intel HD Graphics'
+  var networking=" 802.11 b/g/n,bluetooth 3.0"
+  var batterylife="6-cell Battery"
+  var cost=50,000
+  document.writeln(model,os,processor,ram,screen,resolution,weight,storage,graphics,networking,batterylife,cost)
+   }
+
+laptopspec()
+//-----------------------------------------------------------------------------------------------------------------
+</script>
