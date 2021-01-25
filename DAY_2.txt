@@ -1,0 +1,195 @@
+class speedpost
+{
+    
+     location:string="Piravom"
+     trackingno:string="BC54768"
+     counterno:number=75322
+     opcode:string="A-12"
+     weight:number=20
+     date:string="1/1/2021"
+     time:string="5:00PM"
+     from:string="EKM"
+     to:string="BLR"
+     amnt:number=20
+     tax:number=30
+     total:number=50
+   constructor(location:string,trackingno:string,counterno:number,opcode:string,weight:number,date:string,time:string)
+{
+    this.location=location
+    this.trackingno=trackingno
+    this.counterno=counterno
+    this.opcode=opcode
+    this.weight=weight
+    this.date=date
+    this.time=time
+}
+addressdetails(from:string,to:string)
+{
+   this.from=from
+   this.to=to
+}
+validate()
+{
+   if(this.weight>30)
+   {
+      this.cost(20,30,100)
+   }
+   else
+   {
+     this.cost(20,30,50)
+   }
+}
+cost(amnt:number,tax:number,total:number)
+{
+  this.amnt=amnt
+  this.tax=tax
+  this.total=total
+}
+
+   
+    display()
+    {
+       console.log(this.location)
+       console.log(this.trackingno)
+       console.log(this.counterno)
+       console.log(this.opcode)
+       console.log(this.weight)
+       console.log(this.date)
+       console.log(this.time)
+       console.log(this.from)
+       console.log(this.to)
+       console.log(this.amnt)
+       console.log(this.tax)
+       console.log(this.total)
+     }
+}
+let post=new speedpost("Piravom","BC54768",75322,"A-12",20,"1/1/2021","5:00PM")
+post.addressdetails("EKM","BLR")
+post.cost(20,80,100)
+//post.validate()
+post.display()
+//-------------------------------------------------------------------
+let uber=
+{
+     name:"Adithyan",
+      mobno:98485884,
+     email:"aj@123",
+     passwd:1234,
+     age:23,
+     fromlocation:"Silk board",
+     tolocation:"MG Road",
+     arrivaltime:"10mins",
+     cost:150,
+     tax:50,
+     total:200,
+     
+  details(name:string,mobno:number,email:string,passwd:number,age:number,fromlocation:string,tolocation:string)
+  {
+    this.name=name
+    this.mobno=mobno
+    this.email=email
+    this.passwd=passwd
+    this.age=age
+    this.fromlocation=fromlocation
+    this.tolocation=tolocation
+    if(this.age>10)
+    {
+    this.price(150,100,250)
+    }
+    else
+    {
+      console.log("Enter valid Age(>10yrs)")
+    }
+ },
+ price(cost:number,tax:number,total:number)
+ {
+    this.cost=cost
+    this.tax=tax
+    this.total=total
+    this.validate()
+ },
+ validate()
+ {
+    if(this.email=="aj@123"&& this.passwd==1234)
+    {
+       console.log("<br/>succesfully logged in your details are")
+       this.display()
+    }
+   else
+   {
+   console.log("<br/>Wrong username or password")
+   }
+ },
+   display()
+   {
+       
+       console.log(this.name)
+       console.log(this.mobno)
+       console.log(this.email)
+       console.log(this.age)
+       console.log(this.fromlocation)
+       console.log(this.tolocation)
+       console.log(this.cost)
+       console.log(this.total)
+   
+   }
+}
+uber.details("Adithyan",9888767,"aj@123",1234,23,"Silk Board","MG Road")
+//------------------------------------------------------------------------
+class construction
+{
+  constructor(type,address,landmark,area,floors,facing,width,budget)
+{
+    this.type=type
+    this.address=address
+    this.landmark=landmark
+    this.area=area
+    this.floors=floors
+    this.facing=facing
+    this.width=width
+    this.budget=budget
+}
+details(areacovered,possession,bedrooms,avgrate,recomended)
+{
+    this.areacovered=areacovered
+    this.possession=possession
+    this.bedrooms=bedrooms
+    this.avgrate=avgrate
+    this.recomended=recomended
+    
+    }
+ project()
+ {
+   var projectavailable=["292 Budget", "170 Premium", "2 Luxury"]
+   var properyavailable=["6825 Flats","164 Residential Houses", "138 Residential Plots", "63 Commercial Shops", "53 Office Spaces", "9 Commercial Land"," 5 Villas", "4 Agricultural Land", "1 Commercial Showrooms", "1 Industrial Buildings"]
+ }
+display()
+{
+   document.writeln(this.type)
+   document.writeln(this.address)
+   document.writeln(this.landmark)
+   document.writeln(this.area)
+   document.writeln(this.floors)
+   document.writeln(this.facing)
+   document.writeln(this.width)
+   document.writeln(this.budget)
+   document.writeln(this.areacovered)
+   document.writeln(this.possession)
+   document.writeln(this.bedrooms)
+   document.writeln(this.avgrate)
+   document.writeln(this.recomended)
+   document.writeln(this.projectavailable[0])
+   document.writeln(this.projectavailable[1])
+   document.writeln(this.projectavailable[2])
+   document.writeln(this.projectavailable[3])
+   document.writeln(this.properyavailable[0])
+   document.writeln(this.properyavailable[1])
+   document.writeln(this.properyavailable[2])
+}
+}
+var property=new construction("Residential","Kochi,Kerala","Marrinedrive","9000sqr ft",8,"East","30m","130CR")
+property.details("1195sqft","21/03/2021",2,"7619 per sqft  3.5% in 3 months","Retirees, Family, Couple")
+property.project()
+property.display()
+//----------------------------------------------------------
+
