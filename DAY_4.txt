@@ -1,0 +1,951 @@
+class library
+{
+  constructor(bookid,bookname,author,issuedate,duedate,idno,returnon)
+  {
+   this.bookid=bookid
+   this.bookname=bookname
+   this.author=author
+   this.issuedate=issuedate
+   this.duedate=duedate
+   this.idno=idno
+   this.returnon=returnon
+   }
+
+   namedetails(a)
+   {
+    this.name=a
+    return a
+   }
+   finedetails(b)
+   {
+   this.fine=b
+   return b
+   }
+   display()
+   {
+      document.writeln(this.bookid)
+      document.writeln(this.bookname)
+      document.writeln(this.author)
+      document.writeln(this.issuedate)
+      document.writeln(this.duedate)
+      document.writeln(this.idno)
+      document.writeln(this.returnon)
+   }
+ }
+ var l=new library(1500,"Motorcycle Diaries","Cheguvera","14/jan/2021","14/feb/2021","VJC15EE003",1234)
+ l.display()
+ var k=l.namedetails("Adithyan")
+ var p=l.finedetails(100)
+ document.writeln(k)
+ document.writeln(p)
+//------------------------------------------------------------------
+class car
+{
+   static name="polo"
+   model="petrol"
+   power=1200
+   constructor(year)
+   {
+     this.year=year
+   }
+static brand()
+{
+   document.writeln(car.name)
+}
+   display()
+   {
+       document.writeln(this.year)
+       document.writeln(k.model)
+       document.writeln(k.power)
+   }
+
+}
+var k=new car(2021)
+k.display()
+//-----------------------------------------------------------------------
+class vehichle
+{
+   constructor(type,colour,company,engineno,millege,chasisno)
+   {
+      this.type=type
+      this.colour=colour
+      this.company=company
+      this.engineno=engineno
+      this.millege=millege
+      this.chasisno=chasisno
+   }
+     price(a)
+     {   
+        return a
+     }
+   display()
+   {
+     document.writeln(this.type)
+     document.writeln(this.colour)
+     document.writeln(this.company)
+     document.writeln(this.engineno)
+     document.writeln(this.millege)
+     document.writeln(this.chasisno)
+   
+   }
+}
+var v=new vehichle("lm","black","BMW","KP9850",8,"tc56788")
+//v.spec("KP9850",8,"tc56788")
+var p=v.price(7500000)
+v.display()
+document.write(p)
+//------------------------------------------------------------------------------------------------
+class googleaccnt
+{
+   constructor(firstname,lastname, username,passwd,repasswd,bdy,gender,mobno)
+   {
+      this.firstname=firstname
+      this.lastname=lastname
+      this.username=username
+      this.passwd=passwd
+      this.repasswd=repasswd
+      this.bday=bday
+      this.gender=gender
+      this.mobno=mobno
+   }
+   
+      validate()
+{
+      if(this.passwd==this.repasswd)
+       {
+       // return "success"
+       g.display()
+      return "successfully created accaunt "
+       }
+       else
+       return "incorrect password try  again!!"
+   }
+      display()
+      {
+         document.writeln(this.firstname)
+         document.writeln(this.lastname)
+         document.writeln(this.username)
+         document.writeln(this.bday)
+         document.writeln(this.gender)
+         document.writeln(this.mobno)
+      
+      }
+}
+var g=new googleaccnt("Adithyan","Nair","adithyan.nair","password","password","21/02/1997","male","845278299")
+//var k=g.accntdetails("adithyan.nair","password","password","21/02/1997","male","845278299")
+ var k=g.validate()
+document.writeln(k)
+
+//--------------------------------------------------------------------------------------
+class electricitybill
+{
+   constructor(username,password,repassword,billno,website,transaction,amnt)
+   {
+      this.username=username
+      this.password=password
+      this.repassword=repassword
+      this.billno=billno
+      this.website=website
+      this.transactionid=transaction
+      this.amnt=amnt
+    }
+     validate()
+{
+
+      if(this.password==this.repassword)
+     {
+     
+        this.display()
+     }
+     else 
+     {
+          document.writeln("password incorrect!!")
+     }
+
+}
+   
+   display()
+   {
+     document.writeln(this.username)
+     document.writeln(this.billno)
+     document.writeln(this.website)
+     document.writeln(this.transactionid)
+     document.writeln(this.amnt)
+     document.writeln(this.msg) 
+   
+   }
+}
+var elc=new electricitybill("adithyan.nair","aj123","aj123",1223,"www.kseb.com",45321,1000)
+// elc.bill(1223,"www.kseb.com",45321,1000)
+//b.display()
+//------------------------------------------------------------------------------------------
+class queue
+{
+   constructor(tickettype,day,date,time,bookingno,name,orderno,email,aadhar,noperson,seva,previlage,accomodation,rate)
+{
+     this.tickettype=tickettype
+     this.day=day
+     this.date=date
+     this.time=time
+     this.bookingno=bookingno
+      this.name=name
+      this.orderno=orderno
+      this.email=email
+      this.aadhar=aadhar
+      this.noperson=noperson
+      this.seva=seva
+      this.previlage=previlage
+      this.accomodation=accomodation
+      this.rate=rate
+}
+ 
+   display()
+   {
+      document.writeln(this.tickettype)
+      document.writeln(this.day)
+      document.writeln(this.date)
+      document.writeln(this.time)
+      document.writeln(this.bookingno)
+      document.writeln(this.name)
+      document.writeln(this.orderno)
+      document.writeln(this.email)
+      document.writeln(this.aadhar)  
+      document.writeln(this.noperson)
+      document.writeln(this.seva)
+      document.writeln(this.previlage)
+      document.writeln(this.accomodation) 
+      document.writeln(this.rate) 
+   }
+}
+var k=new queue("Special Entry","Dec 1","Monday","5:00AM",1234,"Adithyan",8593,"aj.123",4567,1,"Archana","Laddu","Tirumala",500)
+//k.ticket(1234,"Adithyan",8593,"aj.123",4567,1,"Archana","Laddu","Tirumala",500)
+k.display()
+//-------------------------------------------------------------------------------------------
+let queue=
+{
+    
+   tickettype:"Special Entry",
+   day:"Dec 1",
+   date:"Monday",
+   time:"5:00AM",
+   ticket(bookingno,name,orderno,email,aadhar,noperson,seva,previlage,accomodation,rate)
+   {
+      this.bookingno=bookingno
+      this.name=name
+      this.orderno=orderno
+      this.email=email
+      this.aadhar=aadhar
+      this.noperson=noperson
+      this.seva=seva
+      this.previlage=previlage
+      this.accomodation=accomodation
+      this.rate=rate
+   },
+      display()
+   {
+      document.writeln(this.tickettype)
+      document.writeln(this.day)
+      document.writeln(this.date)
+      document.writeln(this.time)
+      document.writeln(this.bookingno)
+      document.writeln(this.name)
+      document.writeln(this.orderno)
+      document.writeln(this.email)
+      document.writeln(this.aadhar)  
+      document.writeln(this.noperson)
+      document.writeln(this.seva)
+      document.writeln(this.previlage)
+      document.writeln(this.accomodation) 
+      document.writeln(this.rate) 
+   }
+}
+queue.ticket(1234,"Adithyan",8593,"aj.123",4567,1,"Archana","Laddu","Tirumala",500)
+queue.display()
+//--------------------------------------------------------------------------------------------------------------
+let queue=
+{
+    
+   tickettype:"Special Entry",
+   day:"Dec 1",
+   date:"Monday",
+   time:"5:00AM"
+ }
+ queue.k=function(bookingno,name,orderno,email,aadhar,noperson,seva,previlage,accomodation,rate)
+ {
+      this.bookingno=bookingno
+      this.name=name
+      this.orderno=orderno
+      this.email=email
+      this.aadhar=aadhar
+      this.noperson=noperson
+      this.seva=seva
+      this.previlage=previlage
+      this.accomodation=accomodation
+      this.rate=rate
+   }
+ queue.d=function()
+ {
+ 
+      document.writeln(this.tickettype)
+      document.writeln(this.day)
+      document.writeln(this.date)
+      document.writeln(this.time)
+      document.writeln(this.bookingno)
+      document.writeln(this.name)
+      document.writeln(this.orderno)
+      document.writeln(this.email)
+      document.writeln(this.aadhar)  
+      document.writeln(this.noperson)
+      document.writeln(this.seva)
+      document.writeln(this.previlage)
+      document.writeln(this.accomodation) 
+      document.writeln(this.rate) 
+  }
+ queue.k(1234,"Adithyan",8593,"aj.123",4567,1,"Archana","Laddu","Tirumala",500)
+ queue.d()
+ //--------------------------------------------------------------------------------------
+ class ups
+ {
+   constructor(model,ipvoltage,frequency,opvoltage,type,capacity,backup,time,weight)
+   {
+      this.model=model
+      this.ipvoltage=ipvoltage
+      this.frequency=frequency
+      this.opvoltage=opvoltage
+      this.type=type
+      this.capacity=capacity
+      this.backup=backup
+      this.time=time
+      this.weight=weight
+   }
+  
+   validate()
+   {
+      if(this.model=="digital 600")
+      {
+         this.display()
+      }
+      else
+      {
+         document.writeln("Wrong model no")
+         //return "Wrong model no"
+      }
+   
+   }
+    display()
+    {
+       document.writeln(this.model)
+       document.writeln(this.ipvoltage)
+       document.writeln(this.frequency)
+       document.writeln(this.opvoltage)
+       document.writeln(this.type)
+       document.writeln(this.capacity)
+       document.writeln(this.backup)
+       document.writeln(this.time)
+       document.writeln(this.weight)
+    }
+    
+ }
+ var c=new ups("digital 600","230V","50Hz","230V","Sealed","12V,7Ah","5hrs","6hrs","6.1Kg")
+// c.battery("Sealed","12V,7Ah","5hrs","6hrs","6.1Kg")
+ c.validate()
+// display()
+//---------------------------------------------------------------------------------------------
+let ups=
+{
+      model:"digital 600",
+      ipvoltage:"230V",
+      frequency:"50Hz",
+      opvoltage:"230V"
+}
+ups.u=function(type,capacity,backup,time,weight)
+{
+      this.type=type
+      this.capacity=capacity
+      this.backup=backup
+      this.time=time
+      this.weight=weight
+
+}
+ups.p=function()
+{
+if(this.model=="digital 600")
+      {
+         ups.s()
+      }
+      else
+      {
+         document.writeln("Wrong model no")
+         //return "Wrong model no"
+      }
+}
+ups.s=function()
+{
+       document.writeln(this.model)
+       document.writeln(this.ipvoltage)
+       document.writeln(this.frequency)
+       document.writeln(this.opvoltage)
+       document.writeln(this.type)
+       document.writeln(this.capacity)
+       document.writeln(this.backup)
+       document.writeln(this.time)
+       document.writeln(this.weight)
+}
+ups.u("Sealed","12V,7Ah","5hrs","7hrs","6.1Kg")
+ups.p()
+//----------------------------------------------------------------------------------------------
+let ups=
+{
+      model:"digital 600",
+      ipvoltage:"230V",
+      frequency:"50Hz",
+      opvoltage:"230V",
+      battery(type,capacity,backup,time,weight)
+   {
+      this.type=type
+      this.capacity=capacity
+      this.backup=backup
+      this.time=time
+      this.weight=weight
+   },
+   validate()
+   {
+      if(this.model=="digital 600")
+      {
+         this.display()
+      }
+      else
+      {
+         document.writeln("Wrong model no")
+         //return "Wrong model no"
+      }
+   
+   },
+    display()
+    {
+       document.writeln(this.model)
+       document.writeln(this.ipvoltage)
+       document.writeln(this.frequency)
+       document.writeln(this.opvoltage)
+       document.writeln(this.type)
+       document.writeln(this.capacity)
+       document.writeln(this.backup)
+       document.writeln(this.time)
+       document.writeln(this.weight)
+    }
+ }
+ 
+ ups.battery("Sealed","12V,7Ah","5hrs","7hrs","6.1Kg")
+ ups.validate()
+ //------------------------------------------------------------------------------
+ class bus
+ {
+   constructor(state,dipo,email,passwd,no,date,time,from,to,cost,tax,total)
+   {
+      this.state=state
+      this.dipo=dipo
+      this.email=email
+      this.passwd=passwd
+      this.no=no
+      this.date=date 
+      this.time=time
+      this.from=from
+      this.to=to
+      this.cost=cost
+      this.tax=tax
+      this.total=total
+   }
+  
+  validate()
+  {
+     if(this.email=="aj@123"&& this.passwd=="1234")
+     {
+        document.writeln("<br/>succesfully logged in your details are")
+        this.display()
+     }
+    else
+    {
+    document.writeln("<br/>Wrong username or password")
+    }
+  }
+    display()
+    {
+        
+        document.writeln(this.state)
+        document.writeln(this.depo)
+        document.writeln(this.email)
+        document.writeln(this.no)
+        document.writeln(this.date)
+        document.writeln(this.time)
+        document.writeln(this.from)
+        document.writeln(this.to)
+    
+    }
+ }
+ var b=new bus("Kerala","EKM","aj@123",1234,"KL1423","12/01/2021","8:45PM","EKM","BLR")
+ b.validate()
+ //------------------------------------------------------------------------------------
+ class license
+ {
+   constructor(state,dlno,name,address,mobno,dob,licfor,date,valid)
+   {
+      this.state=state
+      this.dlno=dlno
+      this.name=name
+      this.address=address
+      this.mobno=mobno
+      this.dob=dob
+      this.licfor=licfor
+      this.date=date
+      this.valid=valid
+      //this.info("Adithyan","xyz",1234,"21/02/1997","HV","12/01/2021",2035)
+   }
+    
+       validate()
+       {
+         if(this.dlno==8593)
+         {
+           document.writeln("Welcome ")
+          this.display()
+         }
+       else
+       {
+           document.writeln("Error in dlno!!")
+       }
+       }
+          display()
+          {
+             document.writeln(this.state)
+             document.writeln(this.dlno)
+             document.writeln(this.name)
+             document.writeln(this.address)
+             document.writeln(this.mobno)
+             document.writeln(this.dob)
+             document.writeln(this.licfor)
+             document.writeln(this.date)
+             document.writeln(this.valid)
+          }
+    }
+    var k=new license("Kerala",8593,"Adithyan","xyz",1234,"21/02/1997","HV","12/01/2021",2035)
+       // k.info("Adithyan","xyz",1234,"21/02/1997","HV","12/01/2021",2035)
+        k.validate()
+    //------------------------------------------------------------------------------------------
+    let train=
+    {
+       trainno:"RJ4560",
+       name:"Rajadhani",
+       //this.info(100038,41150,"1/1/2021","AC 3Tier","General")
+       info(id,pnrno,date,time,clas,quota,name,gender,mailid,from,to)
+       {
+         this.id=id
+         this.pnrno=pnrno
+         this.clas=clas
+         this.quota=quota
+         this.name=name
+         this.gender=gender
+         this.mailid=mailid
+         this.from=from
+         this.to=to
+       },
+
+         validate()
+{
+         if(mailid=="aj@123")
+         {
+          //document.writeln("Wish you a happy and safe journey")
+          this.display()
+        }
+        else
+        {
+          document.writeln("Error try again!!")
+        }
+        },
+      display()
+      {
+       
+       document.writeln(this.trainno)
+       document.writeln(this.name)
+       document.writeln(this.id)
+       document.writeln(this.pnrno)
+       document.writeln(this.date)
+       document.writeln(this.time)
+       document.writeln(this.clas)
+       document.writeln(this.quota)
+       document.writeln(this.name)
+       document.writeln(this.gender)
+       document.writeln(this.mailid)
+       document.writeln(this.from)
+       document.writeln(this.to)
+       document.writeln("Wish you a happy and safe journey")
+      }
+    }
+   train.info(100038,41150,"1/1/2021","AC 3Tier","General","Adithyan","Male","aj@123","ERS","BLR")
+   //------------------------------------------------------------------------------------------------
+   class flight
+   {
+     constructor(flightname,flightno,id,no,date,time,clas,quota,name,gender,mailid,from,to)
+     {
+          this.flightname=flightname
+          this.flightno=flightno
+          //this.info(100038,41150,"1/1/2021","Business Class","Premium")
+          this.id=id
+          this.no=no
+          this.date=date
+          this.time=time
+          this.clas=clas
+          this.quota=quota
+          this.name=name
+          this.gender=gender
+          this.mailid=mailid
+          this.from=from
+          this.to=to
+     }
+          validate()
+     {
+          if(this.id==100038)
+          {
+            document.writeln("Your ticket details are")
+             this.display()
+            //this.details("Adithyan","Male","aj@123","COK","MLB")
+          }
+          else
+          {
+            document.writeln("Error in ticket number try again!!")
+          }
+     }
+     
+      display()
+      {
+       
+       document.writeln(this.flightname)
+       document.writeln(this.flightno)
+       document.writeln(this.id)
+       document.writeln(this.no)
+       document.writeln(this.date)
+       document.writeln(this.time)
+       document.writeln(this.clas)
+       document.writeln(this.quota)
+       document.writeln(this.name)
+       document.writeln(this.gender)
+       document.writeln(this.mailid)
+       document.writeln(this.from)
+       document.writeln(this.to)
+       document.writeln("Wish you a happy and safe journey")
+      }
+    }
+    var f=new flight("Air India",3664,100038,41150,"1/1/2021","Business Class","Premium","Adithyan","Male","aj@123","COK","MLB")
+        f.validate()
+   //-----------------------------------------------------------------------------
+   class appearance
+   {
+     constructor(weight,height,eyecolor,gender,name,address,mobno,state,country)
+     {
+        this.weight=weight
+        this.height=height
+        this.eyecolor=eyecolor
+        this.gender=gender
+        this.name=name
+        this.address=address
+        this.mobno=mobno
+        this.state=state
+        this.country=country
+     }
+    
+         validate()
+         {
+            if(this.state=="Kerala" && this.country=="India")
+            {
+              this.display()
+            }
+            else
+            {
+              document.writeln("Not Indian")
+            }
+         }
+         display()
+         {
+           document.writeln(this.weight)
+           document.writeln(this.height)
+           document.writeln(this.eyecolor)
+           document.writeln(this.gender)
+           document.writeln(this.name)
+           document.writeln(this.address)
+           document.writeln(this.mobno)
+           document.writeln(this.state)
+           document.writeln(this.country)
+         
+        }
+   }
+   var a=new appearance("66Kg","175cm","Black","male","Adithyan"," flat no 12 B Piravom Ernakulam",8764677,"Kerala","India")
+  // a.info("Adithyan"," flat no 12 B Piravom Ernakulam",8764677,"Kerala","India")
+   a.validate()
+   //----------------------------------------------------------------------------------------
+    let health=
+   {
+      name:"Adithyan",
+      id:"aj@123",
+     mobno:84748484,
+     billno:1234,
+     info(age,dob,gender,fasting,address,roomno)
+     {
+        this.age=age
+        this.dob=dob
+        this.gender=gender
+        this.fasting=fasting
+        this.address=address
+        this.roomno=roomno
+        this.validate()
+     },
+     validate()
+     {
+       if(this.name=="Adithyan" && this.billno==1234)
+       {
+         document.writeln("Your details are")
+         this.display()
+       }
+       else
+       {
+         document.writeln("Type Mismatch try again!!")
+       }
+     },
+     display()
+     {
+        document.writeln(this.name)
+        document.writeln(this.id)
+        document.writeln(this.mobno)
+        document.writeln(this.billno)
+        document.writeln(this.age)
+        document.writeln(this.dob)
+        document.writeln(this.gender)
+        document.writeln(this.fasting)
+        document.writeln(this.address)
+        document.writeln(this.roomno)
+       // document.writeln(this.) 
+      }
+   }
+   health.info(23,"21/02/1997","Male","Yes","XYZ",21)
+   
+ //-------------------------------------------------------------------
+
+class info
+{
+  constructor(name,age,gender,mailid,address,city,state,zip,country,mobno,photoid)
+  {
+     this.name=name
+     this.age=age
+     this.gender=gender
+     this.mailid=mailid
+     this.address=address
+     this.city=city
+     this.state=state
+     this.zip=zip
+     this.country=country
+     this.mobno=mobno
+     this.photoid=photoid
+     //this.details("XYZ","Kochi","Kerala",686664,"India",46544,"Aadhar")
+  }
+  
+  validate()
+  {
+     var arr=[1,2,3,4,5]
+     var no=[4,8,2,1]
+     var i=0
+     for(i=0;i<5;i++)
+     {
+        if(arr[i]==no[0])
+        {
+          this.display()
+          break
+        }
+        }
+        else
+        {
+          document.writeln("Data not found!!")
+          break
+        }
+       }
+       // document.writeln("Data not found!!")
+     
+       }
+   display()
+   {
+     document.writeln(this.name)
+     document.writeln(this.age)
+     document.writeln(this.gender)
+     document.writeln(this.mailid)
+     document.writeln(this.address)
+     document.writeln(this.city)
+     document.writeln(this.state)
+     document.writeln(this.zip)
+     document.writeln(this.country)
+     document.writeln(this.mobno)
+     document.writeln(this.photoid)
+   }
+   }
+   var i=new info("Adithyan",23,"Male","aj@123","XYZ","Kochi","Kerala",686664,"India",46544,"Aadhar")
+        //i.details("XYZ","Kochi","Kerala",686664,"India",46544,"Aadhar")
+         i.validate()
+   //---------------------------------------------------------------------
+   let system=
+   {
+     rating:"4.5",
+     processor:"Intelcorei5",
+     ram:"4GB",
+   spec(type,name,description,os,version,id)
+   {
+      this.type=type
+      this.name=name
+      this.description=description
+      this.os=os
+     this.version=version
+     this.id=id
+  
+      //this.osdetails("Windows",10,8051)
+   },
+  
+   validate()
+   {
+     if(this.id==8051)
+     {
+       document.writeln("<br\>Veraion details are:")
+       this.display()
+     }
+       else
+       {
+         document.writeln("Error in version id")
+       }
+   },
+   display()
+   {
+    
+     document.write(this.rating)
+     document.write(this.processor)
+     document.write(this.ram)
+     document.write(this.type)
+     document.write(this.name)
+     document.write(this.description)
+     document.write(this.os)
+     document.write(this.version)
+    document.write(this.id)
+
+    }
+   }
+   system.spec("<br/>64Bit","<br/>hp","<br/>workgroup","Windows",10,8051)
+   system.validate()
+   //-------------------------------------------------------------------
+   class system
+   {
+     constructor(rating,processor,ram,type,name,description,os,version,id)
+     {
+       this.rating=rating
+       this.processor=processor
+       this.ram=ram
+       this.type=type
+       this.name=name
+       this.description=description
+       this.os=os
+       this.version=version
+       this.id=id
+      
+     }
+    
+  
+   validate()
+   {
+     if(this.id==8051)
+     {
+       document.writeln("<br\>Veraion details are:")
+       this.display()
+     }
+       else
+       {
+         document.writeln("Error in version id")
+       }
+   }
+   display()
+   {
+    
+     document.write(this.rating)
+     document.write(this.processor)
+     document.write(this.ram)
+     document.write(this.type)
+     document.write(this.name)
+     document.write(this.description)
+     document.write(this.os)
+     document.write(this.version)
+     document.write(this.id)
+}
+   }
+   var s=new system("4.5","Intelcorei5","4GB","Windows",10,8051)
+       s.validate()
+//----------------------------------------
+let foodcourt=
+{
+   name:["Pizza HUT","KFC","Domminos","Burger King"],
+   type:["AC","NON AC"],
+   location:["Kochi","Bangaloore","Pune"],
+  menu:["Zinger burger","KFC meal","Doubledown Combo","Smokky grilled"],
+  price:[150,375,800,1200],
+   details(billno,table,waiter,person,date,time,cost,tax,total)
+   {
+     this.billno=billno
+     this.table=table 
+     this.waiter=waiter
+     this.person=person
+     this.date=date
+     this.time=time
+     this.cost=cost
+     this.tax=tax
+     this.total=total
+},
+restraunt_details()
+{
+    var i
+    for(i=0;i<4;i++)
+    {
+       if(this.name[i]=="KFC")
+       {
+          this.menudetails()
+       }
+    }
+
+},
+menudetails()
+{
+  var i
+  for(i=0;i<4;i++)
+  {
+   if(this.menu[i]=="KFC meal")
+   {
+       
+     document.writeln("Your order is ready and bill details is:")
+      document.writeln(this.menu[i])
+      document.writeln(this.price[i])
+      this.display(i)
+  
+   }
+  }
+},
+
+
+display(i)
+{
+     
+   document.writeln(this.name[i])
+   document.writeln(this.type[i])
+   document.writeln(this.location[i])
+   document.writeln(this.billno)
+   document.writeln(this.table)
+   document.writeln(this.waiter)
+   document.writeln(this.person)
+   document.writeln(this.date)
+   document.writeln(this.time)
+   document.writeln(this.cost)
+   document.writeln(this.tax)
+   document.writeln(this.total)
+},
+}
+foodcourt.details(1022,3,"Vijay",2,"12/01/2021","8:35PM",1500,200,1700)
+foodcourt.restraunt_details()
+//foodcourt.validate()
+//---------------------------------------------------------------------------------
