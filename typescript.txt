@@ -333,58 +333,60 @@ console.log(k)
 //-------------------------------------------------------------------------
 class library
 {
-    bookid=1500
-    bookname= "Motorcycle Diaries"
-    author="Cheguvera"
-    issuedate="14/jan/2021"
-    duedate="14/feb/2021"
-    idno="VJC15EE003"
-    returnon="21/feb/2021"
-    name="Adithyan"
-    fine=100
-  constructor(bookid:number,bookname:string,author:string)
+    bookid:number=1500;
+    bookname:string= "Motorcycle Diaries";
+    author:string="Cheguvera";
+    issuedate:string="14/jan/2021";
+    duedate:string="14/feb/2021";
+    idno:string="VJC15EE003";
+    returnon:string="21/feb/2021";
+    name:string="Adithyan";
+    fine:number=100;
+  constructor(bookid:number,bookname:string,author:string,issuedate:string,duedate:string,idno:string,returnon:string)
   {
    this.bookid=bookid;
    this.bookname=bookname;
    this.author=author
-   }
-   date(issuedate:string,duedate:string,idno:string,returnon:string)
-   {
    this.issuedate=issuedate
    this.duedate=duedate
    this.idno=idno
    this.returnon=returnon
    }
-   namedetails(name:string)
+   namedetails(name:string):string
    {
     this.name=name
     return name
    }
-   finedetails(fine:number)
+   finedetails(fine:number):number
    {
    this.fine=fine
    return fine
    }
    display()
    {
-      console.log(this.bookid)
-      console.log(this.bookname)
-      console.log(this.author)
-      console.log(this.issuedate)
-      console.log(this.duedate)
-      console.log(this.idno)
-      console.log(this.returnon)
+      console.log("book id is:"+ this.bookid)
+      console.log("Book name is:"+ this.bookname)
+      console.log("Author is:"+ this.author)
+      console.log("issuedate is:"+ this.issuedate)
+      console.log("Duedate is:"+ this.duedate)
+      console.log("id no is:"+ this.idno)
+      console.log("returnon:"+ this.returnon)
       //console.log(this.name)
       //console.log(this.fine)
    }
  }
- var l=new library(1500,"Motorcycle Diaries","Cheguvera")
- l.date("14/jan/2021","14/feb/2021","VJC15EE003","21/feb/2021")
+ var l=new library(1500,"Motorcycle Diaries","Cheguvera","14/jan/2021","14/feb/2021","VJC15EE003","21/feb/2021")
  l.display()
  var k=l.namedetails("Adithyan")
  var b:number=l.finedetails(100)
- console.log(k)
- console.log(b)
+ console.log("Name is :"+ k)
+ console.log("fine is:"+b)
+ var lib2=new library(2500,"Friends","Darwin","24/jan/2021","24/feb/2021","VJC15EE008","26/feb/2021")
+     lib2.display()
+     var k2=lib2.namedetails("Joyel")
+ var b2:number=lib2.finedetails(200)
+ console.log("Name is :"+k2)
+ console.log("fine is :"+b2)
 //-------------------------------------------------------------
 class temple
 {
@@ -758,5 +760,7 @@ display(i:number)
 },
 }
 foodcourt.details(1022,3,"Vijay",2,"12/01/2021","8:35PM",1500,200,1700)
+foodcourt.restraunt_details()
+foodcourt.details(1023,7,"Naveen",3,"12/01/2021","8:35PM",1500,500,2000)
 foodcourt.restraunt_details()
 //------------------------------------------------------------------------
