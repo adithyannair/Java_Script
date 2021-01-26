@@ -168,7 +168,7 @@ t.display();
 class corporate
 {
     company_name="Intimetec";
-    designation="Software Engineer";
+    designation="Software Engineer"; 
     sallary="5.5L";
     location="Bangaloore";
     name:string="Adithyan";
@@ -391,40 +391,38 @@ class library
 class temple
 {
 
-    tickettype="Special Entry"
-    day="Monday"
-    date="Dec 1"
-    time="5:00 AM"
-    bookingno=1234
-    name="Adithyan"
-    orderno=8593
-    email="aj.123"
-    aadhar=4567
-    noperson=1
-    seva="Archana"
-    previlage="Laddu"
-    accomodation="Tirumala"
-    rate=500
-   constructor(tickettype:string,day:string,date:string,time:string)
+    tickettype:string="Special Entry";
+    day:string="Monday";
+    date:string="1/1/2021";
+    time:string="5:00 Am";
+    bookingno:number=1234;
+    orderno:number=8593;
+    name:string="Adithyan";
+    email:string="aj.123";
+    aadhar:number=4567;
+    noperson:number=1;
+    seva:string="Archana";
+    previlage:string="Laddu";
+    accomodation:string="Tirumala";
+    rate:number=500;
+   constructor(tickettype:string,day:string,date:string,time:string,bookingno:number,name:string,orderno:number,email:string,aadhar:number,noperson:number,seva:string,previlage:string,accomodation:string,rate:number)
 {
      this.tickettype=tickettype
      this.day=day
      this.date=date
      this.time=time
+     this.bookingno=bookingno
+     this.name=name
+     this.orderno=orderno
+     this.email=email
+     this.aadhar=aadhar
+     this.noperson=noperson
+     this.seva=seva
+     this.previlage=previlage
+     this.accomodation=accomodation
+     this.rate=rate
 }
-   ticket(bookingno:number,name:string,orderno:number,email:string,aadhar:number,noperson:number,seva:string,previlage:string,accomodation:string,rate:number)
-   {
-      this.bookingno=bookingno
-      this.name=name
-      this.orderno=orderno
-      this.email=email
-      this.aadhar=aadhar
-      this.noperson=noperson
-      this.seva=seva
-      this.previlage=previlage
-      this.accomodation=accomodation
-      this.rate=rate
-   }
+   
    display()
    {
        console.log(this.tickettype)
@@ -444,9 +442,12 @@ class temple
        
    }
 }
-var dharshan=new temple("Special Entry","Dec 1","Monday","5:00AM")
-dharshan.ticket(1234,"Adithyan",8593,"aj.123",4567,1,"Archana","Laddu","Tirumala",500)
+var dharshan=new temple("Special Entry","Dec 1","Monday","5:00AM",1234,"Adithyan",8593,"aj.123",4567,1,"Archana","Laddu","Tirumala",500)
 dharshan.display()
+var dharshan2=new temple("Normal Entry","Dec 21","Sunday","4:00AM",12334,"Rahul",83678,"rahul@123",7686,1,"Archana","Laddu","Tirumala",1500)
+dharshan2.display()
+var dharshan3=new temple("Special Entry","Dec 11","Saturnday","4:30AM",1834,"Rakesh",82678,"rkesh@007",57686,1,"Archana","Laddu","Tirumala",4500)
+dharshan3.display()
 //----------------------------------------------------------------
 let irctc=
     {
@@ -761,6 +762,6 @@ display(i:number)
 }
 foodcourt.details(1022,3,"Vijay",2,"12/01/2021","8:35PM",1500,200,1700)
 foodcourt.restraunt_details()
-foodcourt.details(1023,7,"Naveen",3,"12/01/2021","8:35PM",1500,500,2000)
+foodcourt.details(1023,7,"Naveen",3,"21/01/2021","9:35PM",1800,200,2000)
 foodcourt.restraunt_details()
 //------------------------------------------------------------------------
