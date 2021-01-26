@@ -220,8 +220,10 @@ class trainticket
        quota:string="General";
        from:string="ERS";
        to:string="BLR";
+       distance:number=530
+       cost:number=1000
        //this.info(100038,41150,"1/1/2021","AC 3Tier","General")
-       constructor(trainno:string,trainname:string,pnrno:number,date:string,time:string,totaltime:string,clas:string,quota:string,from:string,to:string)
+       constructor(trainno:string,trainname:string,pnrno:number,date:string,time:string,totaltime:string,clas:string,quota:string,from:string,to:string,distance:number)
        {
           this.trainno=trainno
           this.trainname=trainname
@@ -233,32 +235,43 @@ class trainticket
           this.quota=quota
           this.from=from
           this.to=to
+          this.distance=distance
        }
-       idvalidate()
+       fare(distance:number)
        {
-          if(this.pnrno==41150)
+          var cost
+          if(this.distance>200 && this.distance<350)
           {
-            console.log("Your train details are")
-            this.print()
+             cost=400
+             this.print()
           }
-          else
+          else if(this.distance>=350 && this.distance<520)
           {
-            console.log("Error in PNR no try again!!")
+            //console.log("Error in PNR no try again!!")
+             cost=800
+             this.print()
+          }
+          else if(this.distance>520 && this.distance<=800)
+          {
+              cost=1200
+              this.print()
           }
        }
        print()
        {
 
-        console.log(this.trainno)
-        console.log(this.trainname)
-        console.log(this.pnrno)
-        console.log(this.date)
-        console.log(this.time)
-        console.log(this.totaltime)
-        console.log(this.clas)
-        console.log(this.quota)
-        console.log(this.from)
-        console.log(this.to)
+        console.log("Train details is")
+        console.log("Train no is: "+ this.trainno)
+        console.log("Trainname is :" + this.trainname)
+        console.log("PNR no is :"+ this.pnrno)
+        console.log("date of journey is : "+ this.date)
+        console.log("Time of journey is :"+ this.time)
+        console.log("Total duration is : "+ this.totaltime)
+        console.log("Class is : "+ this.clas)
+        console.log("compartement is : "+ this.quota)
+        console.log("From station : "+ this.from)
+        console.log("To station : "+ this.to)
+        console.log("Total coat is : "+ this.cost)
        }
     }
     class info extends trainticket
@@ -266,18 +279,20 @@ class trainticket
         name:string="Adithyan";
         gender:string="Male";
         mailid:string="aj@123"
+        remailid:string="aj@123"
       constructor(name:string,gender:string,mailid:string)
       {
-          super("BLR4560","BangalooreExpress",41150,"1/1/2021","8:35PM","12Hrs","General","AC 3 Tier","ERS","BLR")
+          super("BLR4560","BangalooreExpress",41150,"1/1/2021","8:35PM","12Hrs","General","AC 3 Tier","ERS","BLR",550)
           this.name=name
           this.gender=gender
           this.mailid=mailid
+          this.remailid=this.remailid
       }
-         mailvalidate(mailid:string)
+         mailvalidate()
         {
-         if(this.mailid=="aj@123")
+         if(this.mailid==this.remailid)
          {
-          console.log("passenger details are:")
+         // console.log("passenger details are:")
           this.display()
         }
         else
@@ -288,19 +303,21 @@ class trainticket
       display()
       {
        
-       console.log(this.name)
-       console.log(this.gender)
-       console.log(this.mailid)
-       console.log(this.from)
-       console.log(this.to)
+      console.log("Passenger details is:")
+       console.log("passenger name is : "+ this.name)
+       console.log("gender : "+ this.gender)
+       console.log("Mail id : "+ this.mailid)
+       //console.log(this.from)
+       //console.log(this.to)
        console.log("Wish you a happy and safe journey")
       
       }
     }
     const journey=new info("Adithyan","Male","aj@123")
    //irctc.info(100038,41150,"Rajadhani","1/1/2021","8:45 PM","AC 3Tier","General")
-   journey.idvalidate()
-   journey.mailvalidate("aj@123")
+   journey.fare(550)
+   journey.mailvalidate()
+   
 
 
 //-----------------------------------------------------------
