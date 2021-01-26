@@ -2,21 +2,18 @@
   
   class battery
   {
-    constructor(type,standby,talktime,musicplay)
+    constructor(type,standby,talktime,musicplay,tech,body,weight,sim)
     {
        this.type=type
        this.standby=standby
        this.talktime=talktime
        this.musicplay=musicplay
+       this.tech=tech
+       this.body=body
+       this.weight=weight
+       this.sim=sim
     }
-    details(tech,body,weight,sim)
-    {
-      this.tech=tech
-      this.body=body
-      this.weight=weight
-      this.sim=sim
-      
-    }
+    
        validate()
        {
          if(this.talktime>10)
@@ -42,8 +39,8 @@
      }
   
   }
-  var b=new battery("Li-po","24hrs",14,15)
-  b.details("GPS","metal","143g","Nano")
+  var b=new battery("Li-po","24hrs",14,15,"GPS","metal","143g","Nano")
+  //b.details("GPS","metal","143g","Nano")
   b.validate()
  //--------------------------------------------------------------------- 
 class platform
@@ -112,20 +109,18 @@ platform.validate()
 class tv
 {
   static model="LG"
- constructor(lighting,size,type)
+ constructor(lighting,size,type,hdmi,usb,videoservice,price)
  {
     //this.model=model
     this.lighting=lighting
     this.size=size
     this.type=type
- }
- spec(hdmi,usb,videoservice,price)
- {
     this.hdmi=hdmi
     this.usb=usb
     this.videoservice=videoservice
     this.price=price
  }
+ 
   static modelname()
   {
     document.writeln(tv.model)
@@ -155,8 +150,8 @@ class tv
         document.writeln(this.price) 
   }
 }
-var t=new tv("back lighting","55 Inch","LED")
-t.spec("Yes","USB2.0","Youtube",55000)
+var t=new tv("back lighting","55 Inch","LED","Yes","USB2.0","Youtube",55000)
+//t.spec("Yes","USB2.0","Youtube",55000)
 tv.modelname()
 t.validate()
 
@@ -172,26 +167,22 @@ let tv=
   {
    if(name[i]=="SAMSUNG" && price[i]<60000)
    {
-      this.details("backlighting","55 Inch","LED")
+      this.details("backlighting","55 Inch","LED","Yes","USB2.0","Youtube",55000)
       break
    }
   }
   },
-  details(lighting,size,type)
+  details(lighting,size,type,hdmi,usb,videoservice,price)
  {
     //this.model=model
     this.lighting=lighting
     this.size=size
     this.type=type
-    
- },
- spec(hdmi,usb,videoservice,price)
- {
     this.hdmi=hdmi
     this.usb=usb
     this.videoservice=videoservice
     this.price=price
-    //this.display()
+    
  },
  
   validate()
@@ -220,7 +211,7 @@ let tv=
   }
 }
 tv.data()
-tv.spec("Yes","USB2.0","Youtube",55000)
+//tv.details("Yes","USB2.0","Youtube",55000)
 tv.validate()
 //---------------------------------------------------------
 class workshop
