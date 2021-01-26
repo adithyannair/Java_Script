@@ -1,0 +1,300 @@
+class employee
+{
+private id:number;
+name:string
+age:number
+mailid:string
+mob:number
+  constructor(name:string,id:number,age:number,mailid:string,mob:number)
+  {
+     this.name=name
+     this.id=id
+     this.age=age;
+     this.mailid=mailid;
+     this.mob=mob
+}
+print()
+{
+   console.log(this.name)
+   console.log(this.id)
+   console.log(this.age)
+   console.log(this.mailid)
+   console.log(this.mob)
+}
+}
+class salary extends employee
+{
+  sal:number
+  designation:string
+  experiance:number
+  date:string
+  constructor(sal:number,designation:string,experiance:number,date:string)
+  {
+       super("Adithyan",1234,23,"aj@123",8587857)
+        this.sal=sal
+        this.designation=designation
+         this.experiance=experiance
+         this.date=date  
+        } 
+   display()
+   {
+       console.log(this.sal)
+       console.log(this.designation)
+       console.log(this.experiance)
+       console.log(this.date)
+
+   }
+}
+const emp=new salary(550000,"SoftwareEngineer",1,"11/01/2021")
+    emp.print()
+    emp.display()
+//--------------------------------------------------------
+class bank
+{
+  private ifsccode:string
+  bankname:string
+  branch:string
+  address:string
+  constructor(bankname:string,branch:string,ifsccode:string,address:string)
+  {
+      this.bankname=bankname
+      this.branch=branch
+      this.address=address
+      this.ifsccode=ifsccode
+  }
+    validate()
+    {
+        if(this.ifsccode=="ICICI0047")
+        {
+           console.log("Your bank details are")
+           this.print()
+        }
+        else
+        {
+            console.log("error in your IFSC code try again!!")
+        }
+    }
+    print()
+    {
+        console.log(this.bankname)
+        console.log(this.branch)
+        console.log(this.address)
+        console.log(this.ifsccode)
+    }
+}
+class acnt extends bank
+{
+    private accntno:number
+    name:string
+    age:number
+    mailid:string
+    mob:number
+
+   constructor(accntno:number,name:string,age:number,mailid:string,mob:number)
+   {
+       super("ICICI","Kormangala","ICICI0047","NO 5 80 feetroad")
+       this.accntno=accntno
+       this.name=name
+       this.age=age
+       this.mailid=mailid
+       this.mob=mob
+   }
+   accntvalidation()
+   {
+      if(this.accntno==1627)
+      {
+          console.log("Your accnt details are")
+          this.display()
+      }
+        else
+        {
+            console.log("Error in accntno!!")
+        }
+   }
+   display()
+   {
+      console.log(this.accntno)
+      console.log(this.name)
+      console.log(this.age)
+      console.log(this.mailid)
+      console.log(this.mob)
+
+   }
+}
+const banking=new acnt(1627,"Adithyan",23,"aj@123",9878777644)
+  banking.validate()
+  banking.accntvalidation()
+//----------------------------------------------------------
+
+class ubber
+{
+     name:string="Adithyan"
+     mobno:number=98485884
+     age:number=23
+     fromlocation:string="Silk board"
+     tolocation:string="MG Road"
+     arrivaltime:string="10mins"
+    
+     
+  constructor(name:string,mobno:number,age:number,fromlocation:string,tolocation:string)
+  {
+    this.name=name
+    this.mobno=mobno
+    this.age=age
+    this.fromlocation=fromlocation
+    this.tolocation=tolocation
+  }
+     agevalidate()
+     {
+    if(this.age>10)
+    {
+       console.log("Your trip details are:")
+      this.print()
+    }
+    else
+    {
+      console.log("Enter valid Age(>10yrs)")
+    }
+ }
+ print()
+ {
+    console.log("Name is"+ this.name)
+    console.log("Mob no is"+ this.mobno)
+    console.log("Age is"+ this.age)
+    console.log("From location is"+ this.fromlocation)
+    console.log("to location is"+ this.tolocation)
+
+ }
+}
+class fair extends ubber
+{
+    cost:number=150
+    tax:number=50
+    total:number=200
+    email:string="aj@123"
+    passwd:number=1234
+ constructor(cost:number,tax:number,total:number)
+ {
+    super("Adithyan",9888767,23,"Silk Board","MG Road")
+    this.cost=cost
+    this.tax=tax
+    this.total=total
+ }
+ validate()
+ {
+    if(this.email=="aj@123"&& this.passwd==1234)
+    {
+       console.log("succesfully logged in your Fair details is:")
+       this.display()
+    }
+   else
+   {
+   console.log("Wrong username or password")
+   }
+ }
+   display()
+   {
+       
+      
+       console.log("base fair is"+ this.cost)
+       console.log("Tax is"+ this.tax)
+       console.log("Total fair is"+ this.total)
+   
+   }
+}
+const travell=new fair(150,50,200)
+travell.agevalidate()
+travell.validate()
+
+//-----------------------------------------------------------------
+
+       time:string="8:30 PM";
+       totaltime:string="12Hrs";
+       clas:string="AC 3 Tier";
+       quota:string="General";
+       from:string="ERS";
+       to:string="BLR";
+       //this.info(100038,41150,"1/1/2021","AC 3Tier","General")
+       constructor(trainno:string,trainname:string,pnrno:number,date:string,time:string,totaltime:string,clas:string,quota:string,from:string,to:string)
+       {
+          this.trainno=trainno
+          this.trainname=trainname
+          this.pnrno=pnrno
+          this.date=date
+          this.time=time
+          this.totaltime=totaltime
+          this.clas=clas
+          this.quota=quota
+          this.from=from
+          this.to=to
+       }
+       idvalidate()
+       {
+          if(this.pnrno==41150)
+          {
+            console.log("Your train details are")
+            this.print()
+          }
+          else
+          {
+            console.log("Error in PNR no try again!!")
+          }
+       }
+       print()
+       {
+
+        console.log(this.trainno)
+        console.log(this.trainname)
+        console.log(this.pnrno)
+        console.log(this.date)
+        console.log(this.time)
+        console.log(this.totaltime)
+        console.log(this.clas)
+        console.log(this.quota)
+        console.log(this.from)
+        console.log(this.to)
+       }
+    }
+    class info extends trainticket
+    {
+        name:string="Adithyan";
+        gender:string="Male";
+        mailid:string="aj@123"
+      constructor(name:string,gender:string,mailid:string)
+      {
+          super("BLR4560","BangalooreExpress",41150,"1/1/2021","8:35PM","12Hrs","General","AC 3 Tier","ERS","BLR")
+          this.name=name
+          this.gender=gender
+          this.mailid=mailid
+      }
+         mailvalidate(mailid:string)
+        {
+         if(this.mailid=="aj@123")
+         {
+          console.log("passenger details are:")
+          this.display()
+        }
+        else
+        {
+          console.log("Error try again!!")
+        }
+        }
+      display()
+      {
+       
+       console.log(this.name)
+       console.log(this.gender)
+       console.log(this.mailid)
+       console.log(this.from)
+       console.log(this.to)
+       console.log("Wish you a happy and safe journey")
+      
+      }
+    }
+    const journey=new info("Adithyan","Male","aj@123")
+   //irctc.info(100038,41150,"Rajadhani","1/1/2021","8:45 PM","AC 3Tier","General")
+   journey.idvalidate()
+   journey.mailvalidate("aj@123")
+
+
+//-----------------------------------------------------------
