@@ -1,6 +1,6 @@
 class ministatement
    {
-     constructor(name,date,time,atmno,cardno,branchname,txnno,withdrawal,accntno,balance,website)
+     constructor(name,date,time,atmno,cardno,branchname,txnno,withdrawal,accntno,reaccntno,balance,website)
      {
      this.name=name
      this.date=date
@@ -11,13 +11,14 @@ class ministatement
      this.txnno=txnno
      this.withdrawal=withdrawal
      this.accntno=accntno
+     this.reaccntno=reaccntno
      this.balance=balance
      this.website=website
      }
 
      validate()
      {
-        if(this.accntno==3421)
+        if(this.accntno==this.reaccntno)
        {
          document.writeln("<br\>Accaunt details are:")
          this.display()
@@ -44,7 +45,7 @@ class ministatement
       
      }
    }
-  var m=new ministatement("SBI","21/02/2020","10:53AM","SJNL45","XXX0516","Bangaloore Main",2907,50000,3421,2000000,"www.sbi.com") 
+  var m=new ministatement("SBI","21/02/2020","10:53AM","SJNL45","XXX0516","Bangaloore Main",2907,50000,3421,3421,2000000,"www.sbi.com") 
       m.validate()
 //----------------------------------------------------------------
   let visitingcard=
@@ -68,7 +69,7 @@ class ministatement
       }
     else
     {
-      document.writeln("Error")
+      document.writeln("Error in Company name")
     }
     },
     display()
@@ -157,7 +158,7 @@ let shirt=
       }
       else
       {
-       document.writeln("Details are unavailable:")
+       document.writeln("Details are available only for males:")
       }
     },
     display()
