@@ -832,3 +832,75 @@ var bank=new Bank("ICICI","Kormangala","ICICI0047","ICICI0047","NO 5 80 feetroad
   var bank1=new Bank("SBI","Kormangala","SBI0047","SBI0047","NO 5 80 feetroad",21627,21627,"Adithyan",23,"aj@123",9878777644)
   bank1.validate()
 //--------------------------------------------------------------------------------------------------------------
+
+class metroinfo
+{
+   metroname:string
+   state:string
+   lines:number
+   headquarters:string
+   started:number
+   timing:string
+   distance:number
+   cost:number=50
+   name:string="Adithyan";
+   gender:string="Male"
+   metroid:string="aj@123"
+   remetroid:string="aj@123"
+   constructor(metroname:string,state:string,lines:number,headquarters:string,started:number,timing:string,distance:number,name:string,gender:string,metroid:string,remetroid:string)
+   {
+        this.metroname=metroname
+        this.state=state
+        this.lines=lines
+        this.headquarters=headquarters
+        this.started=started
+        this.timing=timing
+        this.distance=distance
+        this.name=name
+        this.gender=gender
+        this.metroid=metroid
+        this.remetroid=this.remetroid
+   }
+     charge(distance:number)
+     {
+         var cost
+        if(this.distance>3 && this.distance<5)
+        {
+            cost=25
+            this.print()
+        }
+       else if(this.distance>5 && this.distance<=8)
+       {
+           cost=50
+           this.print()
+       }
+       else if(this.distance>8 && this.distance<=12)
+       {
+           cost=60
+           this.print()
+       }
+     }
+     print()
+     {
+         console.log("Metro Details is:")
+         console.log(this.metroname)
+         console.log(this.state)
+         console.log(this.lines)
+         console.log(this.headquarters)
+         console.log(this.started)
+         console.log(this.timing)
+         console.log(this.distance)
+         console.log(this.cost)
+         console.log("Passenger details is:")
+         console.log("passenger name is : "+ this.name)
+         console.log("gender : "+ this.gender)
+         console.log("Metro id : "+ this.metroid)
+       console.log("Wish you a happy and safe journey")
+      
+     }
+    }
+    const m=new metroinfo("Namma Metro","Bangaloore",2,"Majestic",2011,"18Hrs",10,"Adithyan","Male","aj@123","aj@123")
+    m.charge(10)
+    const m1=new metroinfo("Kochi Metro","Kerala",2,"Aluva",2018,"18Hrs",10,"Joyal","Male","jljose@1","jljose@1")
+     m1.charge(8)
+//---------------------------------------------------------------------------------------------------------
