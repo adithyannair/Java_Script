@@ -321,3 +321,103 @@ class trainticket
 
 
 //-----------------------------------------------------------
+class metro
+{
+   metroname:string
+   state:string
+   lines:number
+   headquarters:string
+   started:number
+   timing:string
+   distance:number
+   cost:number=50
+   constructor(metroname:string,state:string,lines:number,headquarters:string,started:number,timing:string,distance:number)
+   {
+        this.metroname=metroname
+        this.state=state
+        this.lines=lines
+        this.headquarters=headquarters
+        this.started=started
+        this.timing=timing
+        this.distance=distance
+   }
+     charge(distance:number)
+     {
+         var cost
+        if(this.distance>3 && this.distance<5)
+        {
+            cost=25
+            this.print()
+        }
+       else if(this.distance>5 && this.distance<=8)
+       {
+           cost=50
+           this.print()
+       }
+       else if(this.distance>8 && this.distance<=12)
+       {
+           cost=60
+           this.print()
+       }
+     }
+     print()
+     {
+         console.log("Metro Details is:")
+         console.log(this.metroname)
+         console.log(this.state)
+         console.log(this.lines)
+         console.log(this.headquarters)
+         console.log(this.started)
+         console.log(this.timing)
+         console.log(this.distance)
+         console.log(this.cost)
+     }
+
+}
+class information extends metro
+{
+
+        name:string="Adithyan";
+        gender:string="Male";
+        metroid:string="aj@123"
+        remetroid:string="aj@123"
+      constructor(name:string,gender:string,metroid:string,remetroid:string)
+      {
+          super("Namma Metro","Bangaloore",2,"Majestic",2011,"18Hrs",10)
+          this.name=name
+          this.gender=gender
+          this.metroid=metroid
+          this.remetroid=this.remetroid
+      }
+         validate()
+        {
+         if(this.metroid==this.remetroid)
+         {
+         // console.log("passenger details are:")
+          this.display()
+        }
+        else
+        {
+          console.log("Error try again!!")
+        }
+        }
+      display()
+      {
+       
+      console.log("Passenger details is:")
+       console.log("passenger name is : "+ this.name)
+       console.log("gender : "+ this.gender)
+       console.log("Metro id : "+ this.metroid)
+       //console.log(this.from)
+       //console.log(this.to)
+       console.log("Wish you a happy and safe journey")
+      
+      }
+    }
+    const trip=new information("Adithyan","Male","aj@123","aj@123")
+    const trip2=new information("Joyal","Male","jljose@1","jljose@1")
+    trip.charge(10)
+    trip.validate()
+    trip2.charge(8)
+    trip2.validate()
+//-------------------------------------------------------------------------------------
