@@ -207,7 +207,13 @@ travell.agevalidate()
 travell.validate()
 
 //-----------------------------------------------------------------
-
+class trainticket
+    {
+       
+       trainno:string="BL4560";
+       trainname:string="BangalooreExpress";
+       pnrno:number=41150;
+       date:string="1/1/2021";
        time:string="8:30 PM";
        totaltime:string="12Hrs";
        clas:string="AC 3 Tier";
