@@ -765,3 +765,70 @@ foodcourt.restraunt_details()
 foodcourt.details(1023,7,"Naveen",3,"21/01/2021","9:35PM",1800,200,2000)
 foodcourt.restraunt_details()
 //------------------------------------------------------------------------
+
+class Bank
+{
+   code:string
+  reifsccode:string
+  bankname:string
+  branch:string
+  address:string
+  accntno:number
+  reaccntno:number
+  name:string
+  age:number
+  mailid:string
+  mob:number
+
+  constructor(bankname:string,branch:string,code:string,reifsccode:string,address:string,accntno:number,reaccntno:number,name:string,age:number,mailid:string,mob:number)
+  {
+      this.bankname=bankname
+      this.branch=branch
+      this.address=address
+      this.code=code
+      this.reifsccode=reifsccode
+      this.accntno=accntno
+      this.reaccntno=reaccntno
+      this.name=name
+       this.age=age
+       this.mailid=mailid
+       this.mob=mob
+  }
+    validate()
+    {
+        if(this.code==this.reifsccode && this.accntno==this.reaccntno)
+        {
+           console.log("Your bank details are")
+           this.print()
+        }
+        else
+        {
+            console.log("error in your IFSC code or Accntnumber try again!!")
+        }
+    }
+    print()
+    {
+        console.log(this.bankname)
+        console.log(this.branch)
+        console.log(this.address)
+        console.log(this.code)
+        console.log("Your accnt details are:")
+        console.log(this.accntno)
+        console.log(this.name)
+        console.log(this.age)
+        console.log(this.mailid)
+        console.log(this.mob)
+        console.log(this.accntno)
+       // console.log(this.name)
+        //console.log(this.age)
+        //console.log(this.mailid)
+        //console.log(this.mob)
+    }
+    
+
+}
+var bank=new Bank("ICICI","Kormangala","ICICI0047","ICICI0047","NO 5 80 feetroad",1627,1627,"Adithyan",23,"aj@123",9878777644)
+  bank.validate()
+  var bank1=new Bank("SBI","Kormangala","SBI0047","SBI0047","NO 5 80 feetroad",21627,21627,"Adithyan",23,"aj@123",9878777644)
+  bank1.validate()
+//--------------------------------------------------------------------------------------------------------------
