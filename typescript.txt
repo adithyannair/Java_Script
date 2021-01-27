@@ -904,3 +904,88 @@ class metroinfo
     const m1=new metroinfo("Kochi Metro","Kerala",2,"Aluva",2018,"18Hrs",10,"Joyal","Male","jljose@1","jljose@1")
      m1.charge(8)
 //---------------------------------------------------------------------------------------------------------
+
+
+let health=
+{
+  name:"Adithyan",
+  id:10567,
+  address:"Piravom Kerala",
+  mail:"aj@123",
+  mob:86894949,
+  billno:3452,
+  age:23,
+  dob:"30/01/2020",
+  gender:"male",
+  date:"21/01/2021",
+  test:["wbc","rbc","hemoglobin"],
+  result:[4.4,4.5,14.3],
+  interval:["4-10.5","4.10-5.60","12.5-17"],
+ details(name:string,id:number,address:string,mail:string,mob:number,billno:number,age:number,dob:string,gender:string)
+ {
+     this.name=name
+     this.id=id
+     this.address=address
+     this.mail=mail
+     this.mob=mob
+     this.billno=billno
+     this.age=age
+     this.dob=dob
+     this.gender=gender
+ },
+testdetails()
+{
+    var i 
+    for(i=0;i<3;i++)
+    {
+        if(this.test[i]=="wbc")
+        {
+            if(this.result[i]<4)
+            {
+                console.log("Low wbc count")
+            }
+            else{
+                console.log(" wbc count is normal")
+            }
+        }
+            else if(this.test[i]=="rbc")
+            {
+                if(this.result[i]<4)
+                {
+                    console.log("low rbc count")
+                }
+                else{
+                    console.log("rbc count is normal")
+                }
+            }
+            else if(this.test[i]=="hemoglobin")
+            {
+                if(this.result[i]<15)
+                {
+                    console.log("low hemoglobin")
+                }
+                else{
+                    console.log("normal hemoghlobin level")
+                }
+            }
+        
+    }
+},
+display()
+{
+    console.log("Patient details is:")
+    console.log(this.name)
+    console.log(this.id)
+    console.log(this.address)
+    console.log(this.mail)
+    console.log(this.mob)
+    console.log(this.billno)
+    console.log(this.age)
+    console.log(this.dob)
+    console.log(this.gender)
+}
+}
+health.details("Adithyan",10567,"Piravom Kerala","aj@123",86894949,3452,23,"30/01/2020","male")
+health.testdetails()
+health.display()
+//------------------------------------------------------------
