@@ -128,7 +128,7 @@ class tv
   }
   validate()
   {
-    if(this.price>50000)
+    if(typeof this.price=="number" && this.price>50000)
     {
        document.writeln("TV result is:")
        this.display()
