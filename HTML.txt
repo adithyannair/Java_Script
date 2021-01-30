@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My first web page</title>
+</head>
+<body>
+    <h1>This is just some text</h1>
+    <h2>This is just some text</h2>
+    <h3>This is just some text</h3>
+    <h4>This is just some text</h4>
+    <h5>This is just some text</h5>
+    <h6>This is just some text</h6>
+    <p><b>Lorem</b> ipsum dolar sit meat</br> <b>everything</b> is going fine</p>
+    <img src="html.png" alt="There was supposed to be an image" >
+    <big><b>This text is big</b></big></br>
+    <hr width="100%">
+    <small><b>This text is small</b></small>
+    <a href="https://www.edureka.co:">This is a link to a website </a>
+    <h2>These are my favourate cars</h2>
+    <ol>
+        <li>BMW</li>
+        <li>Endevour</li>
+        <li>Rangerover</li>
+        <li>Audi A5</li>
+        <li>Polo</li>
+    </ol>
+    <ul>
+        <h2>These are my favourate heros</h2>
+        <li>Dq</li>
+        <li>Tovino</li>
+        <li>Nivin</li>
+        <li>Fafa</li>
+    </ul>
+</body>
+</html>
+//-------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title> My first webpage   </title>
+</head>
+<body>
+    <h1> Registration Form</h1>
+    <div id="reg-form">
+        <form action="" method="">
+            <label for="first name">First Name</label>
+            <input type="text" name="first name" placeholder="Adhi" required>
+            <label for="last name">Last Name</label>
+            <input type="text" name="last name" placeholder="Nair" required>
+<div>
+    <label for="gender male">Male</label>
+    <input type="radio" name="gender choice" value="choice-1" required>
+    <label for="gender-female">Female</label>
+    <input type="radio" name="gender choice" value="choice-2" required>
+    <label for="gender other">other</label>
+    <input type="radio" name="gender choice" value="choice-3" required>
+</body>
+</html>
+//-----------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> WEBDEV </title>
+    </head>
+  <body>
+      <header>
+          <div class="main">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Gallery</a></li>
+                  <li><a href="#">Abaut</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+
+      </header>
+  </body>
+    </html>
+//--------------------------------------------------------------
