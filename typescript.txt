@@ -67,33 +67,35 @@ class car
 var k=new car("polo","Gt",2021,"petrol");
 k.display();
 //---------------------------------------------------------
-  class carinsurance
+ class carinsurance
 {   
-      name="Adithyan"
-      address="XYZ"
-      mailid="aj@123"
-      mobno=8478585859
-      policyno=92027
-      preposalno=110771
-      period="14/01/2021 to 21/01/2021"
-      occupation="software engineer"
-      regno= "KL-07-BJ-5044"
-      model="CIVIC"
-      engineno=834
-      cc=2000
-      year=2010
-      seating=5
-      netpremium=20000
-      idv=250000
-      constructor(name:string,address:string,mailid:string,mobno:number,policyno:number,preposalno:number,period:string,occupation:string,regno:string,model:string,engineno:number,cc:number,year:number,seating:number,netpremium:number,idv:number)
-  {
+      name:string
+      address:string
+      mailid:string
+      mobno:number
+      policyno:number
+      preposalno:number
+      periodstart:string
+      periodend:string
+      occupation:string
+      regno:string
+      model:string
+      engineno:number
+      cc:number
+      year:number
+      seating:number
+      netpremium:number
+      idv:number
+      constructor(name:string,address:string,mailid:string,mobno:number,policyno:number,preposalno:number,periodstart:string,periodend:string,occupation:string,regno:string,model:string,engineno:number,cc:number,year:number,seating:number,netpremium:number,idv:number)
+   {
      this.name=name
      this.address=address
      this.mailid=mailid
      this.mobno=mobno
      this.policyno=policyno
      this.preposalno=preposalno
-     this.period=period
+     this.periodstart=periodstart
+     this.periodend=periodend
      this.occupation=occupation
      this.regno=regno
      this.model=model
@@ -103,22 +105,41 @@ k.display();
      this.seating=seating
      this.netpremium=netpremium
      this.idv=idv
-     this.policy(92027,110711,"14/01/2021 to 21/01/2021","Software engineer")
  }
- 
-   //
+   
+ policyvalidate()
+ {
+  if(typeof this.policyno=="number" && typeof this.preposalno=="number")
+   {
+      this.datevalidate()
+   }
+     else
+     {
+       console.log("Error in policyno or preposalno")
+     }
+ }
+   datevalidate()
+   {
+      if(this.periodend>"20/01/2021")
+      {
+        console.log("Renew your policy")
+      }
+    else{
+      this.validate()
+    }
+   }
   validate()
   {
-    if(this.engineno==10834)
+    if(typeof this.engineno=="number")
     {
       console.log("Welcome")
       this.display()
     }
   else
   {
-    document.writeln("Error")
+    console.log("Error")
   }
-   }
+ }
    display()
    {
      console.log(this.name)
@@ -129,7 +150,8 @@ k.display();
      console.log(this.mobno)
      console.log(this.policyno)
      console.log(this.preposalno)
-     console.log(this.period)
+     console.log(this.periodstart)
+     console.log(this.periodend)
      console.log(this.occupation)
      console.log(this.regno)
      console.log(this.model)
@@ -141,8 +163,10 @@ k.display();
      console.log(this.idv)
 }
 }
-var insurance=new carinsurance("Adithya","XYZ","aj@123",848978433,92027,110711,"14/01/2021 to 21/01/2021","Software engineer","KL-07-BJ-5044","CIVIC",00834,2000,2010,5,20000,250000)
-    insurance.validate()
+
+var insurance=new carinsurance("Adithya","XYZ","aj@123",848978433,92027,110711,"14/01/2020","21/01/2021","Software engineer","KL-07-BJ-5044","CIVIC",10834,2000,2010,5,20000,250000)
+    insurance.policyvalidate()
+ 
 //--------------------------------------------------------
 class theatre
 {
