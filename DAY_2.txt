@@ -70,71 +70,73 @@ post.cost(20,80,100)
 post.display()
 //-------------------------------------------------------------------
 let uber=
-{
-     name:"Adithyan",
-      mobno:98485884,
-     email:"aj@123",
-     passwd:1234,
-     age:23,
-     fromlocation:"Silk board",
-     tolocation:"MG Road",
-     arrivaltime:"10mins",
-     cost:150,
-     tax:50,
-     total:200,
-     
-  details(name:string,mobno:number,email:string,passwd:number,age:number,fromlocation:string,tolocation:string)
+ {
+      name:"Adithyan",
+       mobno:98485884,
+      email:"aj@123",
+      passwd:1234,
+      age:23,
+      fromlocation:"Silk board",
+      tolocation:"MG Road",
+      arrivaltime:"10mins",
+      
+   details(name,mobno,email,passwd,repasswd,age,fromlocation,tolocation)
+   {
+     this.name=name
+     this.mobno=mobno
+     this.email=email
+     this.passwd=passwd
+     this.repasswd=repasswd
+     this.age=age
+     this.fromlocation=fromlocation
+     this.tolocation=tolocation
+     },
+     agevalidate()
+     {
+     if(typeof this.age=="number" && this.age>10)
+     {
+     this.price(150,100,250)
+     }
+     else
+     {
+       document.writeln("Enter valid Age(>10yrs)")
+     }
+  },
+  price(cost,tax,total)
   {
-    this.name=name
-    this.mobno=mobno
-    this.email=email
-    this.passwd=passwd
-    this.age=age
-    this.fromlocation=fromlocation
-    this.tolocation=tolocation
-    if(this.age>10)
-    {
-    this.price(150,100,250)
-    }
+     this.cost=cost
+     this.tax=tax
+     this.total=total
+     this.validate()
+  },
+  validate()
+  {
+     if(typeof this.passwd=="string" && this.passwd==this.repasswd)
+     {
+        document.writeln("<br/>succesfully logged in your details are")
+        this.display()
+     }
     else
     {
-      console.log("Enter valid Age(>10yrs)")
+    document.writeln("<br/>Wrong username or password")
     }
- },
- price(cost:number,tax:number,total:number)
- {
-    this.cost=cost
-    this.tax=tax
-    this.total=total
-    this.validate()
- },
- validate()
- {
-    if(this.email=="aj@123"&& this.passwd==1234)
+  },
+    display()
     {
-       console.log("<br/>succesfully logged in your details are")
-       this.display()
+        
+        document.writeln(this.name)
+        document.writeln(this.mobno)
+        document.writeln(this.email)
+        document.writeln(this.age)
+        document.writeln(this.fromlocation)
+        document.writeln(this.tolocation)
+        document.writeln(this.cost)
+        document.writeln(this.total)
+    
     }
-   else
-   {
-   console.log("<br/>Wrong username or password")
-   }
- },
-   display()
-   {
-       
-       console.log(this.name)
-       console.log(this.mobno)
-       console.log(this.email)
-       console.log(this.age)
-       console.log(this.fromlocation)
-       console.log(this.tolocation)
-       console.log(this.cost)
-       console.log(this.total)
-   
-   }
-}
-uber.details("Adithyan",9888767,"aj@123",1234,23,"Silk Board","MG Road")
+ }
+uber.details("Adithyan",9888767,"aj@123","ak1234","ak1234",23,"Silk Board","MG Road")
+uber.agevalidate()
 //------------------------------------------------------------------------
 class construction
 {
