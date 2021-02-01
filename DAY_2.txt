@@ -194,4 +194,94 @@ property.details("1195sqft","21/03/2021",2,"7619 per sqft  3.5% in 3 months","Re
 property.project()
 property.display()
 //----------------------------------------------------------
-
+let flipkart=
+{
+   electronics:["TV","Camera","Laptops","Datastorage"],
+   fashion:["Mens Tshirt","Kurtas","Shoes","Watches"],
+   mobiles:["Iphone","Oneplus","Samsung","Redmi"],
+   mobileprice:[120000,80000,45000,25000],
+   ramdetails:["10Gb","8Gb","6Gb","6Gb"],
+   details(name,mobno,mailid,passwd,repasswd,product,brand,ram,price)
+   {
+       this.name=name
+       this.mobno=mobno
+       this.mailid=mailid
+       this.passwd=passwd
+       this.repasswd=repasswd
+       this.product=product
+       this.brand=brand
+       this.ram=ram
+       this.price=price
+   },
+   passwdvalidate()
+   {
+    if(typeof this.passwd=="string" && this.passwd==this.repasswd)
+    {
+      document.writeln("Succesfully logged in")
+      this.productselection()
+    }
+    else
+    {
+      document.writeln("Wrong username or Password")
+    }
+   
+   },
+   productselection()
+   {
+      var i
+      if(this.product=="mobiles")
+      {
+       document.writeln("mobiles")
+       }
+      
+      for(i=0;i<3;i++)
+       {
+        if(this.mobiles[i]==this.brand)
+        {
+           this.productdetails()
+           break
+        }
+        }
+        
+      },
+   productdetails()
+   {
+     var i
+      for(i=0;i<3;i++)
+      {
+        if(this.ramdetails[i]==this.ram)
+        {
+           this.pricedetails()
+      
+        }
+        }
+      },   
+      pricedetails()
+      {
+      var i
+      for(i=0;i<3;i++)
+      {
+        if(this.mobileprice[i]==this.price)
+        {
+           this.display()
+      
+        }
+        }
+      },   
+      
+    display()
+   {
+     document.writeln(this.name)
+     document.writeln(this.mobno)
+     document.writeln(this.mailid)
+     document.writeln(this.product)
+     document.writeln(this.brand)
+     document.writeln(this.ram)
+     document.writeln(this.price)
+},
+}
+flipkart.details("Adithyan",859992938,"aj@123","aj333","aj333","mobiles","Iphone","10Gb",120000)
+flipkart.passwdvalidate()
+flipkart.details("Joyal",859652938,"jj@123","jj333","jj333","mobiles","Oneplus","8Gb",80000)
+flipkart.passwdvalidate()
+//---------------------------------------------------------------------------
