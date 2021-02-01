@@ -171,7 +171,7 @@ class googleaccnt
     }
    datevalidate()
    {
-    if(typeof this.date!="number" && this.date>31)
+    if(typeof this.bdate!="number" || this.bdate>31)
     {
       document.writeln("Enter a valid date")
     }
@@ -180,7 +180,7 @@ class googleaccnt
    }
    validatemonth()
    {
-     if(typeof this.month!="number" && this.month>12)
+     if(typeof this.bmonth!="number" || this.bmonth>12)
     {
       document.writeln("Enter a valid month")
     }
@@ -633,7 +633,7 @@ class bus
     }
    datevalidate()
    {
-    if(typeof this.date!="number" && this.date>31)
+    if(typeof this.date!="number" || this.date>31)
     {
       document.writeln("Enter a valid date")
     }
@@ -642,7 +642,7 @@ class bus
    }
    validatemonth()
    {
-     if(typeof this.month!="number" && this.month>12)
+     if(typeof this.month!="number" || this.month>12)
     {
       document.writeln("Enter a valid month")
     }
@@ -650,7 +650,7 @@ class bus
    }
    agevalidate()
 {
-   if(typeof this.age=="number" && this.age>10)
+   if(typeof this.age=="number" || this.age>10)
    {
      this.gendervalidate()
    }
@@ -811,7 +811,7 @@ class license
     },
    datevalidate()
    {
-    if(typeof this.date!="number" && this.date>31)
+    if(typeof this.date!="number" || this.date>31)
     {
       document.writeln("Enter a valid date")
     }
@@ -820,7 +820,7 @@ class license
    },
    validatemonth()
    {
-     if(typeof this.month!="number" && this.month>12)
+     if(typeof this.month!="number" || this.month>12)
     {
       document.writeln("Enter a valid month")
     }
@@ -945,7 +945,7 @@ class license
     }
    datevalidate()
    {
-    if(typeof this.date!="number" && this.date>31)
+    if(typeof this.date!="number" || this.date>31)
     {
       document.writeln("Enter a valid date")
     }
@@ -954,7 +954,7 @@ class license
    }
    validatemonth()
    {
-     if(typeof this.month!="number" && this.month>12)
+     if(typeof this.month!="number" || this.month>12)
     {
       document.writeln("Enter a valid month")
     }
@@ -1096,7 +1096,7 @@ class license
     },
    datevalidate()
    {
-    if(typeof this.date!="number" && this.date>31)
+    if(typeof this.date!="number" || this.date>31)
     {
       document.writeln("Enter a valid date")
     }
@@ -1105,7 +1105,7 @@ class license
    },
    validatemonth()
    {
-     if(typeof this.month!="number" && this.month>12)
+     if(typeof this.month!="number" || this.month>12)
     {
       document.writeln("Enter a valid month")
     }
