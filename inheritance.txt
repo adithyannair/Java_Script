@@ -13,6 +13,28 @@ mob:number
      this.mailid=mailid;
      this.mob=mob
 }
+namevalidate()
+{
+if(typeof this.name!="string")
+{
+   console.log("Enter a proper name")
+}
+else
+{
+   this.agevalidate()
+}
+}
+agevalidate()
+{
+   if(this.age<23)
+   {
+      console.log("Enter a valid age")
+   }
+   else
+   {
+      this.print()
+   }
+}
 print()
 {
    console.log(this.name)
