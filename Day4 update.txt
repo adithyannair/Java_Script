@@ -26,7 +26,7 @@ class library
    namedetails(name)
    {
     this.name=name
-    if(typeof name=="string")
+    if(typeof this.name=="string")
     return name
     else
     document.writeln("Enter a valid name")
@@ -34,7 +34,7 @@ class library
    finedetails(fine)
    {
    this.fine=fine
-   if(typeof fine=="number")
+   if(typeof this.fine=="number")
    return fine
    else
    document.writeln("Error in fine details")
