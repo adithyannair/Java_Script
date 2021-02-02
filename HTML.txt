@@ -78,3 +78,69 @@
   </body>
     </html>
 //--------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+    <head>
+ <title>Welcome</title>
+<style>
+body {background-color:darkgray;color: chocolate;}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    height: 36px;
+    line-height: 36px; 
+    background-color: powderblue;
+    font-size: 20px;
+}
+li{
+    float: left;
+    border-right: 1px solid;
+    text-align: center;
+}
+a{
+  display:block;
+  padding: 0 28px;
+  text-decoration: none;
+
+}
+a:hover{
+
+  background-color: #156ee2;  
+}
+.active a{
+    background-color: #156ee2; 
+}
+.abaut a:hover{
+    color: cornsilk;
+}
+ul li ul li
+{
+    display: none
+
+}
+ul li:hover ul li{
+    display:block;
+}
+</style>
+</head>
+ <body>
+    <ul>
+       
+    <li class="active"><a href="#">Home</a></li>
+    <li class="abaut"><a href=# >Abaut Us</a></li>
+    <li ><a href="#">Services</a></li>
+    <li ><a href="#">Products</a>
+     <ul>
+         <li><a href=#>TV</a></li>
+         <li><a href=#>Mobiles</a></li>
+         <li><a href=#>Camera</a></li>
+         <li><a href=#>Watches</a></li>
+     </ul>
+    
+    </li>
+    <li ><a href="#">Contacts</a></li>
+    </ul>
+ </body>
+</html>
