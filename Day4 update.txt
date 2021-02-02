@@ -1385,5 +1385,106 @@ foodcourt.details(1022,3,"Vijay",2,"12/01/2021","8:35PM",1500,200,1700)
 foodcourt.restraunt_details()
 //foodcourt.validate()
 //---------------------------------------------------------------------------------
-*/
+let flipkart=
+{
+   electronics:["TV","Camera","Laptops","Datastorage"],
+   fashion:["Mens Tshirt","Kurtas","Shoes","Watches"],
+   mobiles:["Iphone","Oneplus","Samsung","Redmi"],
+   mobileprice:[120000,80000,45000,25000],
+   ramdetails:["10Gb","8Gb","6Gb","6Gb"],
+   details(name,mobno,mailid,passwd,repasswd,product,brand,ram,price)
+   {
+       this.name=name
+       this.mobno=mobno
+       this.mailid=mailid
+       this.passwd=passwd
+       this.repasswd=repasswd
+       this.product=product
+       this.brand=brand
+       this.ram=ram
+       this.price=price
+   },
+   passwdvalidate()
+   {
+    if(typeof this.passwd=="string" && this.passwd==this.repasswd)
+    {
+      document.writeln("Succesfully logged in")
+      this.productselection()
+    }
+    else
+    {
+      document.writeln("Wrong username or Password")
+    }
+   
+   },
+   productselection()
+   {
+      var i
+      if(this.product=="mobiles")
+      {
+       document.writeln("mobiles")
+      }
+ 
+      
+        if(this.brand=="Iphone")
+        {
+           this.productdetails()
+           //break
+        }
+        else if(this.brand=="Oneplus")
+      {
+          this.productdetails()
+         // break
+      }
+      else if(this.brand=="Samsung")
+      {
+        this.productdetails()
+        //break
+      }
+      else if(this.brand=="Redmi")
+      {
+        this.productdetails()
+        //break
+      }
+      
+      //}
+      
+   },
+   productdetails()
+   {
+     var i
+      
+        if(this.ram=="10Gb")
+        {
+           this.display()
+           //break
+        }
+        else if(this.ram=="8Gb")
+        {
+           this.display()
+           //break
+        }
+         else if(this.ram=="6Gb")
+        {
+           this.display()
+          // break
+        }
+       // }
+      },   
+   display()
+   {
+     document.writeln(this.name)
+     document.writeln(this.mobno)
+     document.writeln(this.mailid)
+     document.writeln(this.product)
+     document.writeln(this.brand)
+     document.writeln(this.ram)
+
+   },
+}
+flipkart.details("Adithyan",859992938,"aj@123","aj333","aj333","mobiles","Iphone","10Gb",120000)
+flipkart.passwdvalidate()
+flipkart.details("Joyal",859652938,"jj@123","jj333","jj333","mobiles","Oneplus","8Gb",50000)
+flipkart.passwdvalidate()
 </script>
+//--------------------------------------------------------------------------------------
