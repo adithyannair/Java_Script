@@ -196,3 +196,111 @@ ul li:hover ul li{
     </ul>
  </body>
 </html>
+//-----------------------------------------------
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Music</title>  
+  <style>
+    h1{
+      color: brown;
+    }
+    body{
+      background: whitesmoke;
+    }
+  </style>
+ </head>
+  <h1>Enjoy the music</h1>
+  <h2>Select the artist you want</h2>
+</head>
+  <body>
+    <ol>
+      <li>Arijith Singh
+      </li>
+      <li>Atif Aslam</li>
+      <li>Arman Malik</li>
+    </ol>
+   <img src="C:\Users\adithyan.nair\Downloads/arijith.JFIF" height=120 width=120>
+    <audio controls>
+      <source src="C:\Users\adithyan.nair\Music/Hawayein.mp3" type="audio/mpeg">
+      
+    </audio>
+    </body>
+</html>
+//---------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+ <title>table creation</title>   
+ </head>
+ <body>
+    <table>
+    <th>Name</th> 
+    <th>Rollno</th> 
+    <th>Result</th>
+    <tr>
+     <td> Rahul</td>  
+     <td> 101</td>  
+     <td> Pass</td>   
+    </tr>  
+    <tr>
+        <td> Rakesh</td>  
+        <td> 102</td>  
+        <td> Pass</td>   
+       </tr>  
+       <tr>
+        <td> Shwetha</td>  
+        <td> 103</td>  
+        <td> Pass</td>   
+       </tr>  
+    </table> 
+ </body>
+</html>
+//--------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form Creation</title>
+        
+        <style>
+           body{
+            background-color:wheat;
+           }
+            
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+               First Name :
+                <input type="text" placeholder="First Name">
+            </div>
+            <div>
+                Last name:
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div>
+                username:
+                <input type="text" placeholder="mailid">
+            </div>
+            <div>
+                password:
+                <input type="password" placeholder="password">
+            </div>
+            <div>
+                DOB:
+                <input type="date" placeholder="Day/Date/Year">
+            </div>
+            <div>
+                Gender:
+                <input type="radio">male
+                <input type="radio">Female
+                <input type="radio">Other
+            </div>
+            </form>
+            <button><a href="https://www.google.com">Submit</a></button>
+        
+        
+    </body>
+</html>
+//---------------------------------------------------------------------------------------
