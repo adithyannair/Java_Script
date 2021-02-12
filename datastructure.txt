@@ -1,0 +1,492 @@
+class telivision
+{
+  static model:string="LG"
+  tv:any[]=[]
+ constructor(lighting:string,size:string,price:number)
+ //constructor(lighting:string,size:string,type:string,hdmi:string,usb:string,videoservice:string,price:number)
+  {
+    
+    this.tv.push(lighting)
+    this.tv.push(size)
+    this.tv.push(price)
+ }
+  static modelname()
+  {
+    console.log(telivision.model)
+   // console.log(this.model)
+
+  }
+  validate()
+  {
+    if(this.tv[2]>50000)
+    {
+       console.log("TV result is:")
+       this.display()
+    }
+    else
+    {
+     console.log( "No result found!!")
+    
+    }
+  }
+  display()
+  {
+         console.log("Tv type is: "+ this.tv[0])
+         console.log("Tv size is: "+ this.tv[1])
+        console.log("Price is: "+ this.tv[2]) 
+  }
+}
+var t=new telivision("back lighting","55 Inch",55000)
+telivision.modelname()
+t.validate()
+//----------------------------------------------------------
+
+class carinsurance
+{   
+      policy:any[]=[]
+      constructor(name:string,address:string,mailid:string,mobno:number,policyno:number,preposalno:number,periodstart:string,periodend:string,occupation:string,regno:string,model:string,engineno:number,cc:number,year:number,seating:number,netpremium:number,idv:number)
+   {
+     this.policy.push(name)
+     this.policy.push(address)
+     this.policy.push(mailid)
+     this.policy.push(mobno)
+     this.policy.push(policyno)
+     this.policy.push(preposalno)
+     this.policy.push(periodstart)
+     this.policy.push(periodend)
+     this.policy.push(occupation)
+     this.policy.push(regno)
+     this.policy.push(model)
+     this.policy.push(engineno)
+     this.policy.push(cc)
+     this.policy.push(year)
+     this.policy.push(seating)
+     this.policy.push(netpremium)
+     this.policy.push(idv)
+  
+ }
+   
+ policyvalidate()
+ {
+  if(typeof this.policy[4]=="number" && typeof this.policy[5]=="number")
+   {
+      this.datevalidate()
+   }
+     else
+     {
+       console.log("Error in policyno or preposalno")
+     }
+ }
+   datevalidate()
+   {
+      if(this.policy[7]>"20/01/2021")
+      {
+        console.log("Renew your policy")
+      }
+    else{
+      this.validate()
+    }
+   }
+  validate()
+  {
+    if(typeof this.policy[11]=="number")
+    {
+      console.log("Welcome")
+      this.display()
+    }
+  else
+  {
+    console.log("Error")
+  }
+ }
+   display()
+   {
+     console.log(this.policy[0])
+     console.log(this.policy[1])
+     console.log(this.policy[2])
+     console.log(this.policy[3])
+     console.log(this.policy[4])
+     console.log(this.policy[5])
+     console.log(this.policy[6])
+     console.log(this.policy[7])
+     console.log(this.policy[8])
+     console.log(this.policy[9])
+     console.log(this.policy[10])
+     console.log(this.policy[11])
+     console.log(this.policy[12])
+     console.log(this.policy[13])
+     console.log(this.policy[14])
+     console.log(this.policy[15])
+     console.log(this.policy[16])
+    
+}
+}
+
+var insurance=new carinsurance("Adithya","XYZ","aj@123",848978433,92027,110711,"14/01/2020","19/01/2021","Software engineer","KL-07-BJ-5044","CIVIC",10834,2000,2010,5,20000,250000)
+insurance.policyvalidate()
+ //-----------------------------------------------------------------
+let visitingcard=
+  {
+    company:"Intime Tec",
+    designation:"Software Engineer",
+    address:"Silk Board",
+    himanshu:[1,2,3,4],
+    details:function(abc:{name:string,mailid:string,no:number,pan:string}){}
+  }
+  //abc:{} ~  var/let  abc = {}
+    visitingcard.details=function(abc:{name:string,mailid:string,no:number,pan:string})
+    {
+      console.log(visitingcard.company,abc);
+      console.log(visitingcard.designation);
+      console.log(visitingcard.address);
+      console.log(abc.name)
+      console.log(abc.mailid)
+  
+    }
+     
+  visitingcard.details({name:"Adithyan",mailid:"aj@113",no:857738939,pan:"AZP83883"}) 
+  //-----------------------------------------------------------------
+ let foodcourt=
+{
+   name:["Pizza HUT","KFC","Domminos","Burger King"],
+   type:["AC","NON AC"],
+   location:["Kochi","Bangaloore","Pune"],
+  menu:["Zinger burger","KFC meal","Doubledown Combo","Smokky grilled"],
+  price:[150,375,800,1200],
+  billno:10223,
+  table:3,
+  waiter:"Vijay",
+  person:2,
+  date:"12/01/2021",
+  time:"8:45PM",
+  cost:1500,
+  tax:200,
+  total:1700,
+   details(billno:number,table:number,waiter:string,person:number,date:string,time:string,cost:number,tax:number,total:number)
+   {
+     this.billno=billno
+     this.table=table 
+     this.waiter=waiter
+     this.person=person
+     this.date=date
+     this.time=time
+     this.cost=cost
+     this.tax=tax
+     this.total=total
+},
+
+restraunt_details()
+{
+    var i
+    foodcourt.name.push("A2B")
+
+    for(i=0;i<6;i++)
+    {
+       if(this.name[i]=="KFC")
+       {
+          this.menudetails()
+       }
+    }
+
+},
+menudetails()
+{
+  var i
+  
+  for(i=0;i<4;i++)
+  {
+   if(this.menu[i]=="KFC meal")
+   {
+       
+     console.log("Your order is ready and bill details is:")
+      console.log(this.menu[i])
+      console.log(this.price[i])
+      this.display(i)
+  
+   }
+  }
+},
+
+
+display(i:number)
+{
+     
+   console.log(this.name[i])
+   console.log(this.type[i])
+   console.log(this.location[i])
+   console.log(this.billno)
+   console.log(this.table)
+   console.log(this.waiter)
+   console.log(this.person)
+   console.log(this.date)
+   console.log(this.time)
+   console.log(this.cost)
+   console.log(this.tax)
+   console.log(this.total)
+},
+}
+//foodcourt.name.push("A2B")
+//console.log(foodcourt.name)
+foodcourt.details(1022,3,"Vijay",2,"12/01/2021","8:35PM",1500,200,1700)
+foodcourt.restraunt_details()
+foodcourt.details(1023,7,"Naveen",3,"21/01/2021","9:35PM",1800,200,2000)
+foodcourt.restraunt_details()
+//--------------------------------------------------------------
+class metro
+{
+   metroname:string
+   state:string
+   lines:number
+   headquarters:string
+   started:number
+   timing:string
+   distance:number
+   cost:number=50
+   name:string
+   gender:string
+   metroid:string
+   remetroid:string
+   constructor(metroname:string,state:string,lines:number,headquarters:string,started:number,timing:string,distance:number,name:string,gender:string,metroid:string,remetroid:string)
+   {
+        this.metroname=metroname
+        this.state=state
+        this.lines=lines
+        this.headquarters=headquarters
+        this.started=started
+        this.timing=timing
+        this.distance=distance
+        this.name=name
+        this.gender=gender
+        this.metroid=metroid
+        this.remetroid=remetroid
+   }
+     charge(distance:number)
+     {
+         var cost
+        if(this.distance>3 && this.distance<5)
+        {
+            cost=25
+            this.print()
+        }
+       else if(this.distance>5 && this.distance<=8)
+       {
+           cost=50
+           this.print()
+       }
+       else if(this.distance>8 && this.distance<=12)
+       {
+           cost=60
+           this.print()
+       }
+     }
+     print()
+     {
+         console.log("Metro Details is:")
+         console.log(this.metroname)
+         console.log(this.state)
+         console.log(this.lines)
+         console.log(this.headquarters)
+         console.log(this.started)
+         console.log(this.timing)
+         console.log(this.distance)
+         console.log(this.cost)
+     }
+         validate()
+        {
+         if(this.metroid==this.remetroid)
+         {
+         // console.log("passenger details are:")
+          this.display()
+        }
+        else
+        {
+          console.log("Error try again!!")
+        }
+        }
+      display()
+      {
+       
+      console.log("Passenger details is:")
+       console.log("passenger name is : "+ this.name)
+       console.log("gender : "+ this.gender)
+       console.log("Metro id : "+ this.metroid)
+       console.log("Wish you a happy and safe journey")
+      
+      }
+    }
+
+    const trip=new metro("Namma metro","Karnataka",2,"Bengaluru",2013,"18Hrs",32,"Adithyan","Male","aj@123","aj@123",)
+    //const trip2=new metro("Joyal","Male","jljose@1","jljose@1")
+    trip.charge(10)
+    trip.validate()
+    //trip2.charge(8)
+    //trip2.validate()
+//--------------------------------------------------------------------------------
+let health=
+{
+ // name:"Adithyan",
+  //id:10567,
+  //address:"Piravom Kerala",
+  //mail:"aj@123",
+  //mob:86894949,
+  //billno:3452,
+  //age:23,
+  //dob:"30/01/2020",
+  //gender:"male",
+  //date:"21/01/2021",
+  info:[]=[],
+  test:["wbc","rbc","hemoglobin"],
+  result:[4.4,4.5,14.3],
+  interval:["4-10.5","4.10-5.60","12.5-17"],
+ details(name:string,id:number,address:string,mail:string,mob:number,billno:number,age:number,dob:string,gender:string)
+ {
+     this.info.push(name)
+     this.info.push(id)
+     this.info.push(address)
+     this.info.push(mail)
+     this.info.push(mob)
+     this.info.push(billno)
+     this.info.push(age)
+     this.info.push(dob)
+     this.info.push(gender)
+ },
+testdetails()
+{
+    var i 
+    for(i=0;i<3;i++)
+    {
+        if(this.test[i]=="wbc")
+        {
+            if(this.result[i]<4)
+            {
+                console.log("Low wbc count")
+            }
+            else{
+                console.log(" wbc count is normal")
+            }
+        }
+            else if(this.test[i]=="rbc")
+            {
+                if(this.result[i]<4)
+                {
+                    console.log("low rbc count")
+                }
+                else{
+                    console.log("rbc count is normal")
+                }
+            }
+            else if(this.test[i]=="hemoglobin")
+            {
+                if(this.result[i]<15)
+                {
+                    console.log("low hemoglobin")
+                }
+                else{
+                    console.log("normal hemoghlobin level")
+                }
+            }
+        
+    }
+},
+display()
+{
+    console.log("Patient details is:")
+    var i:number
+    for(i=0;i<this.info.length;i++)
+    {console.log(this.info[i])}
+    //console.log(this.info[1])
+    //console.log(this.info[2])
+    //console.log(this.info[3])
+    //console.log(this.info[4])
+    //console.log(this.info[5])
+    //console.log(this.info[6])
+    //console.log(this.info[7])
+    //console.log(this.info[8])
+}
+}
+health.details("Adithyan",10567,"Piravom Kerala","aj@123",86894949,3452,23,"30/01/2020","male")
+health.testdetails()
+health.display()
+//---------------------------------------------------------------------
+class Bank
+{
+  
+ info:any[]=[]
+  constructor(bankname:string,branch:string,code:string,reifsccode:string,address:string,accntno:number,reaccntno:number,name:string,age:number,mailid:string,mob:number)
+  {
+      this.info.push(bankname)
+      this.info.push(branch)
+      this.info.push(address)
+      this.info.push(code)
+      this.info.push(reifsccode)
+      this.info.push(accntno)
+      this.info.push(reaccntno)
+      this.info.push(name)
+       this.info.push(age)
+       this.info.push(mailid)
+       this.info.push(mob)
+  }
+    validate()
+    {
+       
+        if(this.info[3]==this.info[4] && this.info[5]==this.info[6])
+        {
+           console.log("Your bank details are")
+           this.print()
+        }
+        else
+        {
+            console.log("error in your IFSC code or Accntnumber try again!!")
+        }
+    }
+    print()
+    {
+        var i:number
+        for(i=0;i<this.info.length;i++) 
+      console.log(this.info[i])
+        
+    }
+    
+
+}
+var bank=new Bank("ICICI","Kormangala","ICICI0047","ICICI0047","NO 5 80 feetroad",1627,1627,"Adithyan",23,"aj@123",9878777644)
+  bank.validate()
+  var bank1=new Bank("SBI","Kormangala","SBI0047","SBI0047","NO 5 80 feetroad",21627,21627,"Adithyan",23,"aj@123",9878777644)
+  bank1.validate()
+//-----------------------------------------------------------------------
+class platform
+{
+    
+    info:any[]=[]
+ constructor(os:string,chipset:string,cpu:string,gpu:string)
+{
+   this.info.push(os)
+   this.info.push(chipset)
+   this.info.push(cpu)
+   this.info.push(gpu)
+   this.validate();
+}
+validate()
+{
+if(this.info[1]=="Apple A9")
+{
+   console.log("platform details are ");
+   this.display();
+}
+else
+{
+  console.log("Error in chipset details");
+}
+}
+  display()
+  {
+    var i:number
+    for(i=0;i<this.info.length;i++)
+    {
+     console.log(this.info[i]);
+    }
+    
+  }
+}    
+ var p=new platform("iOS","Apple A9","Dualcore","PowerVR") 
+ //----------------------------------------------------------------
