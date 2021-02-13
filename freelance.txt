@@ -274,7 +274,7 @@ display: block;
         </div>
         </form>
         <button><a href="https://www.google.com">Submit</a></button>
-    <p>For any quaries and suggestion contact us on <a href="#">9611191232</a></p>
+    <p>For any quaries and suggestion contact us on <a href="#">96546788999</a></p>
     </body>
 </html>
 //--------------------------------------------------------------
