@@ -673,3 +673,44 @@ let employee=
 employee.info("aj@1234567",888767656,"AZ6556");
 employee.validate();
 //----------------------------------------------------------------------
+class Bank
+{
+ 
+  info:Object;
+
+  constructor(obj:{bankname:string,branch:string,code:string,reifsccode:string,address:string,accntno:number,reaccntno:number,name:string,age:number,mailid:string,mob:number})
+  {
+      this.info=obj
+  }
+    validate()
+    {
+       
+        if(this.info.code==this.info.reifsccode && this.info.accntno==this.info.reaccntno)
+        {
+           console.log("Your bank details are")
+           this.print()
+        }
+        else
+        {
+            console.log("error in your IFSC code or Accntnumber try again!!")
+        }
+    }
+    print()
+    {
+        console.log(this.info.bankname)
+        console.log(this.info.branch)
+        console.log(this.info.address)
+        console.log(this.info.code)
+        console.log("Your accnt details are:")
+        console.log(this.info.accntno)
+        console.log(this.info.name)
+        console.log(this.info.age)
+        console.log(this.info.mailid)
+        console.log(this.info.mob)
+        console.log(this.info.accntno)
+      
+    }
+}
+var bank=new Bank({bankname:"ICICI",branch:"Kormangala",code:"ICICI0047",reifsccode:"ICICI004",address:"NO 5 80 feetroad",accntno:1627,reaccntno:1627,name:"Adithyan",age:23,mailid:"aj@123",mob:9878777644})
+  bank.validate()
+  //---------------------------------------------------------------------------------------------
