@@ -631,3 +631,45 @@ else
     //const m1=new metroinfo({metroname:"KochiMetro",state:"Kerala",lines:2,headquarters:"Aluva",started:2018,timing:"18Hrs",distance:10,name:"Joyal",gender:"Male",metroid:"jljose@1",remetroid:"jljose@1")
      //m1.charge(8)
  //------------------------------------------------------------------------------------------------------------
+let employee=
+{
+    name:"Adithyan",
+    companyname:"Intimetec",
+    designation:"developer",
+    sallary:5.5,
+    info:Object;
+  info(mailid:string,mobno:number,panno:string)
+  {
+    this.mailid=mailid;
+    this.mobno=mobno;
+    this.panno=panno;
+    this.info={age:23,gender:"Male"}
+    
+  },
+  validate()
+  {
+    if(typeof this.mailid=="string" && this.mailid.length>7)
+    {
+      this.display()
+    }
+    else
+    {
+      console.log("enter a valid mailid")
+    }
+  }
+  display()
+  {
+    console.log(this.name);
+    console.log(this.companyname);
+    console.log(this.designation);
+    console.log(this.sallary);
+    console.log(this.mailid);
+    console.log(this.mobno);
+    console.log(this.panno);
+    console.log(this.info.age)
+    console.log(this.info.gender)
+  }
+}
+employee.info("aj@1234567",888767656,"AZ6556");
+employee.validate();
+//----------------------------------------------------------------------
