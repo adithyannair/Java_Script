@@ -490,3 +490,144 @@ else
 }    
  var p=new platform("iOS","Apple A9","Dualcore","PowerVR") 
  //----------------------------------------------------------------
+ class metroinfo
+{
+   
+   info:object;
+   constructor(obj:{metroname:string,state:string,lines:number,headquarters:string,started:number,timing:string,distance:number,name:string,gender:string,metroid:string,remetroid:string})
+   {
+        this.info=obj
+   }
+     charge(x:number)
+     {
+         var cost
+        if(x>3 && x<5)
+        {
+            cost=25
+            this.print()
+        }
+       else if(x>5 && x<=8)
+       {
+           cost=50
+           this.print()
+       }
+       else if(x>8 && x<=12)
+       {
+           cost=60
+           this.print()
+       }
+     }
+     print()
+     {
+         console.log("Metro Details is:")
+         console.log(this.info)
+       console.log("Wish you a happy and safe journey")
+      
+     }
+    }
+    const m=new metroinfo({metroname:"Namma Metro",state:"Bangaloore",lines:2,headquarters:"Majestic",started:2011,timing:"18Hrs",distance:10,name:"Adithyan",gender:"Male",metroid:"aj@123",remetroid:"aj@123"})
+     
+    m.charge(10)
+    const m1=new metroinfo({metroname:"Kochi Metro",state:"Kerala",lines:2,headquarters:"Aluva",started:2018,timing:"18Hrs",distance:10,name:"Joyal",gender:"Male",metroid:"jljose@1",remetroid:"jljose@1")
+     m1.charge(8)
+  //-------------------------------------------------------------------------------------------------------------------------------------------------   
+    class metroinfo
+{
+   
+   info:object;
+   constructor(metroname1:string,state1:string,lines1:number,headquarters1:string,started1:number,timing1:string,distance1:number,name1:string,gender1:string,metroid1:string,remetroid1:string)
+   {
+        this.info={metroname:metroname1,state:state1,lines:lines1,started:started1,timing:timing1,distance:distance1,name:name1,gender:gender1,metroid:metroid1,remetroid:remetroid1}
+   }
+     charge(x:number)
+     {
+         var cost
+        if(x>3 && x<5)
+        {
+            cost=25
+            this.print()
+            return cost
+        }
+       else if(x>5 && x<=8)
+       {
+           cost=50
+           this.print()
+           return cost
+       }
+       else if(x>8 && x<=12)
+       {
+           cost=60
+           this.print()
+           return cost
+       }
+     }
+     print()
+     {
+         console.log("Metro Details is:")
+         console.log(this.info)
+       console.log("Wish you a happy and safe journey")
+      
+     }
+    }
+    const m=new metroinfo("Namma Metro","Bangaloore",2,"Majestic",2011,"18Hrs",10,"Adithyan","Male","aj@123","aj@123")
+     
+    var cost=m.charge(10)
+      console.log("Journey cost is : "+ cost)
+    const m1=new metroinfo("Kochi Metro","Kerala",2,"Aluva",2018,"18Hrs",10,"Joyal","Male","jljose@1","jljose@1")
+     m1.charge(8)
+     //----------------------------------------------------------------------------------------------------------------
+    class metroinfo
+{
+   
+   info:any[]=[]
+   constructor(metroname:string,state:string,lines:number,headquarters:string,started:number,timing:string,distance:number,name:string,gender:string,metroid:string,remetroid:string)
+   {
+        this.info.push(metroname)
+        this.info.push(state)
+        this.info.push(lines)
+        this.info.push(headquarters)
+        this.info.push(started)
+        this.info.push(timing)
+        this.info.push(distance)
+        this.info.push(name)
+        this.info.push(gender)
+        this.info.push(metroid)
+        this.info.push(remetroid)
+   }
+     charge(x:number)
+     {
+         var cost
+        if(x>3 && x<5)
+        {
+            cost=25
+            this.print()
+        }
+       else if(x>5 && x<=8)
+       {
+           cost=50
+           this.print()
+       }
+       else if(x>8 && x<=12)
+       {
+           cost=60
+           this.print()
+       }
+     }
+     print()
+     {
+         console.log("Metro Details is:")
+         var i:number=0
+         for(i;i<this.info.length;i++)
+         {
+         console.log(this.info[i])
+         }
+         console.log("Wish you a happy and safe journey")
+      
+     }
+    }
+    const m=new metroinfo("Namma Metro","Bangaloore",2,"Majestic",2011,"18Hrs",10,"Adithyan","Male","aj@123","aj@123")
+     
+    m.charge(10)
+    //const m1=new metroinfo({metroname:"KochiMetro",state:"Kerala",lines:2,headquarters:"Aluva",started:2018,timing:"18Hrs",distance:10,name:"Joyal",gender:"Male",metroid:"jljose@1",remetroid:"jljose@1")
+     //m1.charge(8)
+ //------------------------------------------------------------------------------------------------------------
