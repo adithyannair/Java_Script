@@ -714,3 +714,78 @@ class Bank
 var bank=new Bank({bankname:"ICICI",branch:"Kormangala",code:"ICICI0047",reifsccode:"ICICI004",address:"NO 5 80 feetroad",accntno:1627,reaccntno:1627,name:"Adithyan",age:23,mailid:"aj@123",mob:9878777644})
   bank.validate()
   //---------------------------------------------------------------------------------------------
+let redbus=
+ {
+      name:"Adithyan",
+       age:23,
+      email:"aj@123",
+      password:"aj@1234",
+      repassword:"aj@1234",
+      state:"Kerala",
+      dipo:"EKM",
+      no:"KL1423",
+      date:"12/01/2021",
+      time:"8:45PM",
+      from:"EKM",
+      to:"BLR",
+      cost:900,
+      tax:100,
+      total:1000,
+     deyails:Object 
+   ticket(no:string,date:string,time:string,from:string,to:string)
+   {
+     this.no=no
+     this.date=date
+     this.time=time
+     this.from=from
+     this.to=to
+     this.info={age:23,gender:"Male"}
+   },
+   agevalidate()
+   {
+     if(typeof this.age=="number" && this.age>10)
+     {
+     this.validate()
+     }
+     else
+     {
+       console.log("Enter valid Age(>10yrs)")
+     }
+  },
+  price(cost:number,tax:number,total:number)
+  {
+     this.cost=cost
+     this.tax=tax
+     this.total=total
+     console.log(this.total)
+  },
+  validate()
+  {
+     if(typeof this.email=="string" && this.password==this.repassword)
+     {
+        console.log("succesfully logged in your details are")
+        this.display()
+     }
+    else
+    {
+    console.log("Wrong username or password")
+    }
+  },
+    display()
+    {
+        console.log(this.name)
+        console.log(this.age)
+        console.log(this.email)
+        console.log(this.state)
+        console.log(this.dipo)
+        console.log(this.no)
+        console.log(this.date)
+        console.log(this.time)
+        console.log(this.from)
+        console.log(this.to)
+        this.price(900,100,1000)
+    }
+ }
+ redbus.ticket("KL1423","12/01/2021","8:45PM","EKM","BLR")
+ redbus.agevalidate()
+ //-----------------------------------------------------------------------
